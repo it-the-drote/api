@@ -26,7 +26,7 @@ apps-api: Makefile src/server/apps-api/main.go
 	$(GOC)
 
 clean:
-	rm -f src/server/apps-anker/apps-api
+	rm -f src/server/apps-api/apps-api
 
 install:
 	mkdir -p $(BINDIR)
