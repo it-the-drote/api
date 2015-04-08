@@ -1,0 +1,6 @@
+#!/bin/sh
+
+sdctl disable /lib/systemd/system/apps-api.service
+rm /etc/nginx/sites-enabled/apps-api.nginx
+sdctl reload nginx.service
+sdctl stop apps-api.service
