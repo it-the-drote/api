@@ -19,9 +19,10 @@ func main() {
                             `</h1></div>`
         duolingoLangs := getDuolingoStats(params["name"])
         for _, language := range duolingoLangs {
-            resultScript = resultScript + `<div class="duolingo"><img src="http://api.it-the-drote.tk/static/img/countryballs/` + language.Language + `.png"></img><div class="duolingo-counter">Level ` + strconv.Itoa(language.Level) + `</div></div>';`
+            resultScript = resultScript + `<div class="duolingo"><img src="http://api.it-the-drote.tk/static/img/countryballs/` + language.Language + `.png"></img><div class="duolingo-counter">Level ` + strconv.Itoa(language.Level) + `</div>`
         }
-        resultScript = resultScript + `var langBlock = document.getElementById('duolingoBlock');
+        resultScript = resultScript + `';
+                                        var langBlock = document.getElementById('duolingoBlock');
                                         langBlock.appendChild(langContent);`
         return resultScript
     })

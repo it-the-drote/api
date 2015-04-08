@@ -1,3 +1,9 @@
+apps-api (0.1-13) unstable; urgency=medium
+
+  * typo fix
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 08 Apr 2015 20:23:44 +0300
+
 apps-api (0.1-12) unstable; urgency=medium
 
   * fix unnecessary escaping
