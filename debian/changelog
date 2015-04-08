@@ -1,3 +1,10 @@
+apps-api (0.1-12) unstable; urgency=medium
+
+  * fix unnecessary escaping
+  * rename icon files
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 08 Apr 2015 20:11:25 +0300
+
 apps-api (0.1-11) unstable; urgency=medium
 
   * javascript code generation
