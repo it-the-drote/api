@@ -1,3 +1,9 @@
+apps-api (0.1-9) unstable; urgency=medium
+
+  * Display raw json
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 08 Apr 2015 17:31:31 +0300
+
 apps-api (0.1-8) unstable; urgency=medium
 
   * Display json structure
