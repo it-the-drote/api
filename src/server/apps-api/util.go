@@ -27,7 +27,7 @@ func getDuolingoStats(name string) []LangStats {
     var languages []LangStats
     err = json.Unmarshal([]byte(stdout), languages)
 
-    fmt.Println(name)
+    fmt.Println(languages)
 
     return languages
 }
