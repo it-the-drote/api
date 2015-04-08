@@ -35,6 +35,7 @@ install:
 	mkdir -p $(SYSTEMDCONFDIR)
 	mkdir -p $(RSYSLOGCONFDIR)
 	$(INSTALL_BIN) src/server/apps-api/apps-api $(BINDIR)/
+	$(INSTALL_BIN) src/server/python-middleware/duolingo-api.py $(BINDIR)/
 	cp -R src/static $(SHAREDIR)/
 	$(INSTALL_CONF) src/server/nginx/apps-api.nginx $(NGINXCONFDIR)/
 	$(INSTALL_CONF) src/server/init/apps-api.service $(SYSTEMDCONFDIR)/

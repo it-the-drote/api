@@ -1,3 +1,9 @@
+apps-api (0.1-2) unstable; urgency=medium
+
+  * Installing python middleware
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 08 Apr 2015 12:24:07 +0300
+
 apps-api (0.1-1) unstable; urgency=low
 
   * Initial release
