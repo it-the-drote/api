@@ -27,5 +27,9 @@ func main() {
         return resultScript
     })
 
+    m.Get("/ping", func(params martini.Params) string {
+        return 200, "OK; Serving requests"
+    })
+
     m.RunOnAddr("localhost:8353")
 }
