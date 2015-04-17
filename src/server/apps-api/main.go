@@ -27,7 +27,7 @@ func main() {
         return resultScript
     })
 
-    m.Get("/ping", func(params martini.Params) string {
+    m.Get("/ping", func(params martini.Params) (int, string) {
         return 200, "OK; Serving requests"
     })
 
