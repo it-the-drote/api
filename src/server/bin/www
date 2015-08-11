@@ -50,7 +50,7 @@ process.on('SIGCHLD', function() {
     fs.unlinkSync(settings.socketPath);
     process.exit();
 });
-process.on('SIGSTOP', function() {
+process.on('SIGTERM', function() {
     console.log("Caught SIGCHLD signal");
     fs.unlinkSync(settings.socketPath);
     process.exit();
