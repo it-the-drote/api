@@ -1,3 +1,9 @@
+apps-api (0.2-2) unstable; urgency=medium
+
+  * Fix postinstall and prerm
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 11 Aug 2015 16:12:47 +0300
+
 apps-api (0.2-1) unstable; urgency=medium
 
   * Trying to rewrite this shit in node.js
