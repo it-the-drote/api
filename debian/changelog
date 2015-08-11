@@ -1,3 +1,10 @@
+apps-api (0.2-5) unstable; urgency=medium
+
+  * Syslog identifier changed
+  * Capturing SIGTERM
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 11 Aug 2015 16:48:31 +0300
+
 apps-api (0.2-4) unstable; urgency=medium
 
   * Restart rsyslog in postinstall
