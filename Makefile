@@ -10,8 +10,10 @@ INSTALL_BIN=$(INSTALL) -m755
 INSTALL_CONF=$(INSTALL) -m644
 
 PREFIX?=$(DESTDIR)/usr
+OPTDIR?=$(DESTDIR)/opt/apps-api
 BINDIR?=$(PREFIX)/bin
 SHAREDIR?=$(PREFIX)/share/apps-api
+DATASOURCESDIR?=$(DESTDIR)/etc/datasources
 NGINXCONFDIR?=$(DESTDIR)/etc/nginx/sites-available
 SYSTEMDCONFDIR?=$(DESTDIR)/lib/systemd/system
 RSYSLOGCONFDIR?=$(DESTDIR)/etc/rsyslog.d
@@ -34,9 +36,13 @@ install:
 	mkdir -p $(NGINXCONFDIR)
 	mkdir -p $(SYSTEMDCONFDIR)
 	mkdir -p $(RSYSLOGCONFDIR)
+	mkdir -p $(OPTDIR)
+	mkdir -p $(DATASOURCESDIR)
 	$(INSTALL_BIN) src/server/apps-api/apps-api $(BINDIR)/
 	$(INSTALL_BIN) src/server/python-middleware/duolingo-api.py $(BINDIR)/
 	cp -R src/static $(SHAREDIR)/
+	cp -R src/server $(OPTDIR)/
 	$(INSTALL_CONF) src/server/nginx/apps-api.nginx $(NGINXCONFDIR)/
 	$(INSTALL_CONF) src/server/init/apps-api.service $(SYSTEMDCONFDIR)/
 	$(INSTALL_CONF) src/server/rsyslog/00-apps-api.conf $(RSYSLOGCONFDIR)/
+	$(INSTALL_CONF) src/config/apps-api.json $(DATASOURCESDIR)/

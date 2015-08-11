@@ -1,0 +1,4 @@
+{
+    "pisunBotToken": "12345",
+    "socketPath": "/tmp/apps-api.sock"
+}
