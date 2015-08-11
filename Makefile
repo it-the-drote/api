@@ -1,7 +1,7 @@
 GOC := /usr/bin/go build
 FETCHLIBS=/usr/bin/go get
 
-SRCDIR=src/server/apps-api
+SRCDIR=src/apps-api
 BUILDDIR=/home/apps/bin
 LIBDIR=/home/apps/golibs
 
@@ -20,7 +20,7 @@ RSYSLOGCONFDIR?=$(DESTDIR)/etc/rsyslog.d
 
 all: apps-api
 
-apps-api: Makefile src/server/apps-api/main.go
+apps-api: Makefile src/apps-api/main.go
 	export GOPATH=$(LIBDIR) && \
 	export GOBIN=$(BUILDDIR) && \
 	cd $(SRCDIR) && \
