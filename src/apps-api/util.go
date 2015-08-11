@@ -5,6 +5,7 @@ import (
         "os/exec"
         "encoding/json"
         "io/ioutil"
+        "log"
 )
 
 type LangStats struct {

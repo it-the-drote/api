@@ -27,9 +27,9 @@ func main() {
         return resultScript
     })
 
-    m.Post("/bot/:token", func(params martini.Params) {
+/*    m.Post("/bot/:token", func(params martini.Params) {
         
-    })
+    }) */
 
     m.Get("/ping", func(params martini.Params) (int, string) {
         return 200, "OK; Serving requests"
