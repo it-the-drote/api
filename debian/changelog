@@ -1,3 +1,9 @@
+apps-api (0.2-6) unstable; urgency=medium
+
+  * Dependencies list fix
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 11 Aug 2015 20:34:45 +0300
+
 apps-api (0.2-5) unstable; urgency=medium
 
   * Syslog identifier changed
