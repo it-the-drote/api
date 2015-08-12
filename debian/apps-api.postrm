@@ -1,7 +1,3 @@
 #!/bin/sh
 
-environment=`cat /etc/apps/environment.type`
-
-if $environment == 'development'; then
-    update-etc-hosts
-fi
+update-etc-hosts
