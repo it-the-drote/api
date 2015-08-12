@@ -44,7 +44,8 @@ install:
 	$(INSTALL_BIN) src/python-middleware/duolingo-api.py $(BINDIR)/
 	cp -R src/static $(SHAREDIR)/
 	cp -R src/server/* $(OPTDIR)/
-	$(INSTALL_CONF) src/nginx/apps-api.nginx $(NGINXCONFDIR)/
+	$(INSTALL_CONF) src/nginx/apps-api-dev.nginx $(NGINXCONFDIR)/
+	$(INSTALL_CONF) src/nginx/apps-api-production.nginx $(NGINXCONFDIR)/
 	$(INSTALL_CONF) src/init/apps-api.service $(SYSTEMDCONFDIR)/
 	$(INSTALL_CONF) src/rsyslog/00-apps-api.conf $(RSYSLOGCONFDIR)/
 	$(INSTALL_CONF) src/config/apps-api.json $(DATASOURCESDIR)/
