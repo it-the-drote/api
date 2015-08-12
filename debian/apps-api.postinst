@@ -4,7 +4,7 @@ environment=`cat /etc/apps/environment.type`
 
 useradd apps
 sdctl enable /lib/systemd/system/apps-api.service
-if $environment == 'development'; then
+if test $environment == 'development'; then
     ln -s /etc/nginx/sites-available/apps-api-dev.nginx /etc/nginx/sites-enabled/apps-api.nginx
     update-etc-hosts
 else

@@ -1,3 +1,9 @@
+apps-api (0.2-8) unstable; urgency=medium
+
+  * Fix postinstall and postrm
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 12 Aug 2015 10:54:18 +0300
+
 apps-api (0.2-7) unstable; urgency=medium
 
   * Separate nginx configs
