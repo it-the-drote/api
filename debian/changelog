@@ -1,3 +1,9 @@
+apps-api (0.2-10) unstable; urgency=medium
+
+  * And one more postinstall fix
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 12 Aug 2015 11:32:35 +0300
+
 apps-api (0.2-9) unstable; urgency=medium
 
   * One more postinstall fix
