@@ -10,11 +10,15 @@ router.get('/', function(req, res, next) {
 
 router.post('/jabber', function(req, res) {
 	console.log(req.body.message);
-	if (req.body.token == settings.pisunBotToken) {
-		kurz.socketSend("like-all@it-the-drote.tk", "chat", req.body.message, "/tmp/pisun.socket");
-		res.send("OK\n");
+	if (fs.existsSync('/tmp/pisun.socket')) {
+		if (req.body.token == settings.pisunBotToken) {
+			kurz.socketSend(req.body.recipient, "chat", req.body.message, "/tmp/pisun.socket");
+			res.send("OK\n");
+		} else {
+			res.send("Wrong token\n");
+		}
 	} else {
-		res.send("Wrong token\n");
+		res.send("Pisun is dead\n");
 	}
 });
 
