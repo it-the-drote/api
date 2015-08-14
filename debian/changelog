@@ -1,3 +1,9 @@
+apps-api (0.2-14) unstable; urgency=medium
+
+  * HOTFIX: require fs module
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 14 Aug 2015 17:59:10 +0300
+
 apps-api (0.2-13) unstable; urgency=medium
 
   * recipient field in jabber api

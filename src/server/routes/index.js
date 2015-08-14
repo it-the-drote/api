@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var settings = require('/etc/datasources/apps-api.json');
+var fs = require('fs');
 var kurz = require('/usr/lib/kurz/socket_send.js');
 
 /* GET home page. */
