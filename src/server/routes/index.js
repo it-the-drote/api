@@ -2,11 +2,45 @@ var express = require('express');
 var router = express.Router();
 var settings = require('/etc/datasources/apps-api.json');
 var fs = require('fs');
+var mc = require('mc');
+var dot = require('dot');
+var https = require('https');
+var http = require('http');
 var kurz = require('/usr/lib/kurz/socket_send.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	res.render('index', { title: 'Express' });
+});
+
+router.get('/duolingo/badges/:login', function(req,resp){
+	var memcache = new mc.Client();
+	memcache.connect(function() {
+		console.log("Connected to memcached");
+		userInfo = '';
+		
+		memcache.get("duolingo-info-" + req.params.login, function(err, memcacheResponse) {
+			if(err && err.type == 'NOT_FOUND') {
+				http.get('http://www.duolingo.com/users/' + req.params.login, function(res) {
+					res.setEncoding('utf8');
+					res.on('data', function(chunk) {
+						userInfo += chunk;
+					});
+					res.on('end', function() {
+						memcache.set("duolingo-info-" + req.params.login, JSON.stringify(JSON.parse(userInfo).languages), {flags: 0, exptime: 10800}, function(err, status) {
+							console.log(status);
+							console.log(err);
+						});
+						var template = dot.template(fs.readFileSync('./public/js-templates/duolingo-api.js'))
+						var result = template({htmlcontent: "<p>pooq</p>"})
+						resp.send(result)
+					});
+				});
+			} else {
+				resp.send(memcacheResponse['duolingo-info-' + req.params.login]);
+			}
+		});
+	});
 });
 
 router.post('/jabber', function(req, res) {
