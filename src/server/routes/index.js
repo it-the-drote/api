@@ -6,7 +6,7 @@ var mc = require('mc');
 var dot = require('dot');
 var https = require('https');
 var http = require('http');
-var kurz = require('/usr/lib/kurz/socket_send.js');
+var kurz = require('/usr/lib/leicht/leicht.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
