@@ -13,7 +13,7 @@
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0",
-    "dot": "1.0.3",
+    "string-template": "*",
     "mc": "1.0.6"
   }
 }
