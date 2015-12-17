@@ -3,7 +3,7 @@ var router = express.Router();
 var settings = require('/etc/datasources/apps-api.json');
 var fs = require('fs');
 var mc = require('mc');
-var dot = require('dot');
+var format = require('string-template');
 var https = require('https');
 var http = require('http');
 var kurz = require('/usr/lib/leicht/leicht.js');
@@ -31,8 +31,8 @@ router.get('/duolingo/badges/:login', function(req,resp){
 							console.log(status);
 							console.log(err);
 						});
-						var template = dot.template(fs.readFileSync('./public/js-templates/duolingo-api.js'))
-						var result = template({htmlcontent: "<p>pooq</p>"})
+						var template = fs.readFileSync('./public/js-templates/duolingo-api.js')
+						var result = format(template, {htmlcontent: "<p>pooq</p>"})
 						resp.send(result)
 					});
 				});
