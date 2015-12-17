@@ -31,7 +31,7 @@ router.get('/duolingo/badges/:login', function(req,resp){
 							console.log(status);
 							console.log(err);
 						});
-						var template = fs.readFileSync('./public/js-templates/duolingo-api.js')
+						var template = fs.readFileSync('./public/js-templates/duolingo-api.js').toString()
 						var result = format(template, {htmlcontent: "<p>pooq</p>"})
 						resp.send(result)
 					});
