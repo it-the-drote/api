@@ -8,6 +8,23 @@ var https = require('https');
 var http = require('http');
 var kurz = require('/usr/lib/leicht/leicht.js');
 
+function makeHtmlContent(name, jscontent) {
+	var template = fs.readFileSync('./public/js-templates/duolingo-api.js').toString()
+	var langs
+	for language in jscontent.language {
+		langs += '<div class="duolingo"><img src="http://api.it-the-drote.tk/static/img/countryballs/' +
+		language.language +
+		'.png"></img><div class="duolingo-counter">Level ' +
+		language.level + '</div>'
+	}
+	innerHtml = {
+		htmlcontent: '<div class="duolingo"><h1>Duolingo: ' +
+		name + '</h1></div>' +
+		langs
+	}
+	return(format(template, innerHtml))
+}
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	res.render('index', { title: 'Express' });
@@ -31,13 +48,11 @@ router.get('/duolingo/badges/:login', function(req,resp){
 							console.log(status);
 							console.log(err);
 						});
-						var template = fs.readFileSync('./public/js-templates/duolingo-api.js').toString()
-						var result = format(template, {htmlcontent: "<p>pooq</p>"})
-						resp.send(result)
+						resp.send(makeHtmlContent(req.params.login, JSON.stringify(JSON.parse(userInfo).languages)))
 					});
 				});
 			} else {
-				resp.send(memcacheResponse['duolingo-info-' + req.params.login]);
+				resp.send(makeHtmlContent(req.params.login, memcacheResponse['duolingo-info-' + req.params.login]));
 			}
 		});
 	});
