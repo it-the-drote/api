@@ -16,6 +16,7 @@ function makeHtmlContent(name, jscontent) {
 		language.language +
 		'.png"></img><div class="duolingo-counter">Level ' +
 		language.level + '</div>'
+		console.log(langs)
 	}
 	innerHtml = {
 		htmlcontent: '<div class="duolingo"><h1>Duolingo: ' +
