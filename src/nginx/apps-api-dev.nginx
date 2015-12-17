@@ -2,7 +2,7 @@ server {
     listen 80;
     listen [::]:80;
 
-    server_name dev.api.it-the-drote.tk;
+    server_name api.dev.it-the-drote.tk;
 
     access_log /var/log/nginx/apps-api-access.log;
 
