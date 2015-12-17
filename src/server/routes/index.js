@@ -11,7 +11,7 @@ var kurz = require('/usr/lib/leicht/leicht.js');
 function makeHtmlContent(name, jscontent) {
 	var template = fs.readFileSync('./public/js-templates/duolingo-api.js').toString()
 	var langs
-	for language in jscontent.language {
+	for var language in jscontent.language {
 		langs += '<div class="duolingo"><img src="http://api.it-the-drote.tk/static/img/countryballs/' +
 		language.language +
 		'.png"></img><div class="duolingo-counter">Level ' +
