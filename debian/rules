@@ -6,4 +6,4 @@ include /usr/share/dpkg/default.mk
 	dh $@ 
 
 override_dh_auto_configure:
-	./src/server/node_modules/jshint/bin/jshint src/server/routes/index.js
+	./src/server/node_modules/jshint/bin/jshint src/server/routes/*

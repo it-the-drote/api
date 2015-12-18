@@ -1,3 +1,9 @@
+apps-api (0.3-7) unstable; urgency=medium
+
+  * Split api endpoints into separate files
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 18 Dec 2015 16:29:23 +0200
+
 apps-api (0.3-6) unstable; urgency=medium
 
   * Export pisun bot recipient to datasources
