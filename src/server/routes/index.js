@@ -6,7 +6,7 @@ var mc = require('mc');
 var format = require('string-template');
 var https = require('https');
 var http = require('http');
-var kurz = require('/usr/lib/leicht/leicht.js');
+var leicht = require('/usr/lib/leicht/leicht.js');
 
 function makeHtmlContent(name, jscontent) {
 	var template = fs.readFileSync('./public/js-templates/duolingo-api.js').toString();
@@ -63,11 +63,11 @@ router.get('/duolingo/badges/:login', function(req,resp){
 	});
 });
 
-router.post('/jabber', function(req, res) {
+router.post('/telegram', function(req, res) {
 	console.log(req.body.message);
 	if (fs.existsSync('/tmp/pisun.socket')) {
 		if (req.body.token == settings.pisunBotToken) {
-			kurz.socketSend(req.body.recipient, "chat", req.body.message, "/tmp/pisun.socket");
+			leicht.sendMessage(req.body.recipient, 0, req.body.message, false, "/tmp/pisun.socket");
 			res.send("OK\n");
 		} else {
 			res.send("Wrong token\n");
