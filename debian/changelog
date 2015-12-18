@@ -1,3 +1,9 @@
+apps-api (0.3-9) unstable; urgency=medium
+
+  * Fix telegram endpoint
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 18 Dec 2015 16:51:50 +0200
+
 apps-api (0.3-8) unstable; urgency=medium
 
   * Fix routes

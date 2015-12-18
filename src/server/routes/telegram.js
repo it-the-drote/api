@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var fs = require('fs');
 var settings = require('/etc/datasources/apps-api.json');
 var leicht = require('/usr/lib/leicht/leicht.js');
 
