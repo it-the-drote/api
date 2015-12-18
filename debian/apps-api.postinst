@@ -4,11 +4,7 @@ environment=`cat /etc/apps/environment.type`
 
 useradd apps
 sdctl enable /lib/systemd/system/apps-api.service
-if test $environment = 'development'; then
-    ln -s /etc/nginx/sites-available/apps-api-dev.nginx /etc/nginx/sites-enabled/apps-api.nginx
-else
-    ln -s /etc/nginx/sites-available/apps-api-production.nginx /etc/nginx/sites-enabled/apps-api.nginx
-fi
+ln -s "/etc/nginx/sites-available/apps-api."$environment".nginx" /etc/nginx/sites-enabled/apps-api.nginx
 chown -R www-data:www-data /usr/share/apps-api/static
 sdctl reload nginx.service
 sdctl restart rsyslog.service
