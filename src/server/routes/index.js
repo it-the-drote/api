@@ -22,7 +22,7 @@ function makeHtmlContent(name, jscontent) {
 		htmlcontent: '<div class="duolingo"><h1>Duolingo: ' +
 		name + '</h1></div>' +
 		langs
-	}
+	};
 	return(format(template, innerHtml));
 }
 
@@ -49,7 +49,7 @@ router.get('/duolingo/badges/:login', function(req,resp){
 							console.log(status);
 							console.log(err);
 						});
-						console.log('data is taken from the web')
+						console.log('data is taken from the web');
 						resp.setHeader("Content-Type", "application/javascript");
 						resp.send(makeHtmlContent(req.params.login, JSON.stringify(JSON.parse(userInfo).languages)));
 					});
