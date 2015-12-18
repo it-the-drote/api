@@ -1,3 +1,9 @@
+apps-api (0.3-1) unstable; urgency=medium
+
+  * New building rules
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 18 Dec 2015 14:16:35 +0200
+
 apps-api (0.2-28) unstable; urgency=medium
 
   * Properly iterate over languages
