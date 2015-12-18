@@ -1,3 +1,10 @@
+apps-api (0.2-26) unstable; urgency=medium
+
+  * Proper setting of content-type
+  * Converting string to json
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 18 Dec 2015 12:11:07 +0200
+
 apps-api (0.2-25) unstable; urgency=medium
 
   * Debug symbols and Content-Type header
