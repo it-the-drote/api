@@ -67,7 +67,7 @@ router.post('/telegram', function(req, res) {
 	console.log(req.body.message);
 	if (fs.existsSync('/tmp/pisun.socket')) {
 		if (req.body.token == settings.pisunBotToken) {
-			leicht.sendMessage(req.body.recipient, 0, req.body.message, false, "/tmp/pisun.socket");
+			leicht.sendMessage(settings.pisunBotRecipient, 0, req.body.message, false, "/tmp/pisun.socket");
 			res.send("OK\n");
 		} else {
 			res.send("Wrong token\n");
