@@ -12,7 +12,7 @@ function makeHtmlContent(name, jscontent) {
 	var template = fs.readFileSync('./public/js-templates/duolingo-api.js').toString()
 	var langs
 	console.log("JSContent: " + jscontent)
-	for(var language in JSON.parse(jscontent).language) {
+	for(var language in JSON.parse(jscontent)) {
 		langs += '<div class="duolingo"><img src="http://api.it-the-drote.tk/static/img/countryballs/' +
 		language.language +
 		'.png"></img><div class="duolingo-counter">Level ' +
