@@ -12,12 +12,12 @@ function makeHtmlContent(name, jscontent) {
 	var template = fs.readFileSync('./public/js-templates/duolingo-api.js').toString()
 	var langs
 	console.log("JSContent: " + jscontent)
-	for(var language in jscontent.language) {
+	for(var language in JSON.parse(jscontent).language) {
 		langs += '<div class="duolingo"><img src="http://api.it-the-drote.tk/static/img/countryballs/' +
 		language.language +
 		'.png"></img><div class="duolingo-counter">Level ' +
 		language.level + '</div>'
-		console.log(langs)
+		console.log("Langs: " + langs)
 	}
 	innerHtml = {
 		htmlcontent: '<div class="duolingo"><h1>Duolingo: ' +
@@ -51,11 +51,12 @@ router.get('/duolingo/badges/:login', function(req,resp){
 							console.log(err);
 						});
 						console.log('data is taken from the web')
-						resp.header("Content-Type", "application/javascript");
+						resp.setHeader("Content-Type", "application/javascript");
 						resp.send(makeHtmlContent(req.params.login, JSON.stringify(JSON.parse(userInfo).languages)));
 					});
 				});
 			} else {
+				resp.setHeader("Content-Type", "application/javascript");
 				resp.send(makeHtmlContent(req.params.login, memcacheResponse['duolingo-info-' + req.params.login]));
 				console.log('data is taken from the memcache');
 			}
