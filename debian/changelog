@@ -1,3 +1,9 @@
+apps-api (0.3-4) unstable; urgency=medium
+
+  * Remove extra semicolon
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 18 Dec 2015 15:22:26 +0200
+
 apps-api (0.3-3) unstable; urgency=medium
 
   * trying to use jshint

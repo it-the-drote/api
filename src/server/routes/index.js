@@ -21,7 +21,7 @@ function makeHtmlContent(name, jscontent) {
 	innerHtml = {
 		htmlcontent: '<div class="duolingo"><h1>Duolingo: ' +
 		name + '</h1></div>' +
-		langs;
+		langs
 	}
 	return(format(template, innerHtml));
 }
