@@ -9,22 +9,21 @@ var http = require('http');
 var kurz = require('/usr/lib/leicht/leicht.js');
 
 function makeHtmlContent(name, jscontent) {
-	var template = fs.readFileSync('./public/js-templates/duolingo-api.js').toString()
-	var langs
-	var data = JSON.parse(jscontent)
+	var template = fs.readFileSync('./public/js-templates/duolingo-api.js').toString();
+	var langs = '';
+	var data = JSON.parse(jscontent);
 	for(var i = 0; i < data.length; i++) {
 		langs += '<div class="duolingo"><img src="http://api.it-the-drote.tk/static/img/countryballs/' +
 		data[i].language +
 		'.png"></img><div class="duolingo-counter">Level ' +
-		data[i].level + '</div>'
-		console.log("Langs: " + langs)
+		data[i].level + '</div>';
 	}
 	innerHtml = {
 		htmlcontent: '<div class="duolingo"><h1>Duolingo: ' +
 		name + '</h1></div>' +
-		langs
+		langs;
 	}
-	return(format(template, innerHtml))
+	return(format(template, innerHtml));
 }
 
 /* GET home page. */
