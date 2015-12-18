@@ -11,6 +11,7 @@ var kurz = require('/usr/lib/leicht/leicht.js');
 function makeHtmlContent(name, jscontent) {
 	var template = fs.readFileSync('./public/js-templates/duolingo-api.js').toString()
 	var langs
+	console.log("JSContent: " + jscontent)
 	for(var language in jscontent.language) {
 		langs += '<div class="duolingo"><img src="http://api.it-the-drote.tk/static/img/countryballs/' +
 		language.language +
@@ -50,12 +51,13 @@ router.get('/duolingo/badges/:login', function(req,resp){
 							console.log(err);
 						});
 						console.log('data is taken from the web')
-						resp.send(makeHtmlContent(req.params.login, JSON.stringify(JSON.parse(userInfo).languages)))
+						resp.header("Content-Type", "application/javascript");
+						resp.send(makeHtmlContent(req.params.login, JSON.stringify(JSON.parse(userInfo).languages)));
 					});
 				});
 			} else {
 				resp.send(makeHtmlContent(req.params.login, memcacheResponse['duolingo-info-' + req.params.login]));
-				console.log('data is taken from the memcache')
+				console.log('data is taken from the memcache');
 			}
 		});
 	});
