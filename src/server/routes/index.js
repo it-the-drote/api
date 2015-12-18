@@ -11,12 +11,12 @@ var kurz = require('/usr/lib/leicht/leicht.js');
 function makeHtmlContent(name, jscontent) {
 	var template = fs.readFileSync('./public/js-templates/duolingo-api.js').toString()
 	var langs
-	console.log("JSContent: " + jscontent)
-	for(var language in JSON.parse(jscontent)) {
+	var data = JSON.parse(jscontent)
+	for(var i = 0; i < data.length; i++) {
 		langs += '<div class="duolingo"><img src="http://api.it-the-drote.tk/static/img/countryballs/' +
-		language.language +
+		data[i].language +
 		'.png"></img><div class="duolingo-counter">Level ' +
-		language.level + '</div>'
+		data[i].level + '</div>'
 		console.log("Langs: " + langs)
 	}
 	innerHtml = {
