@@ -6,6 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
+var duolingoEndpoint = require('./routes/duolingo');
+var telegramEndpoint = require('./routes/telegram');
 
 var app = express();
 
@@ -22,8 +24,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/jabber', routes);
-app.use('/duolingo/badges/:login', routes);
+app.use('/telegram', telegramEndpoint);
+app.use('/duolingo/badges/:login', duolingoEndpoint);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
