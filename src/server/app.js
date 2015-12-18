@@ -24,8 +24,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/telegram', telegramEndpoint);
-app.use('/duolingo/badges/:login', duolingoEndpoint);
+app.use('/', telegramEndpoint);
+app.use('/', duolingoEndpoint);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
