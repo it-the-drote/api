@@ -1,3 +1,9 @@
+apps-api (0.3-11) unstable; urgency=medium
+
+  * some fixes
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Sun, 20 Dec 2015 00:28:08 +0200
+
 apps-api (0.3-10) unstable; urgency=medium
 
   * instagram api endpoint

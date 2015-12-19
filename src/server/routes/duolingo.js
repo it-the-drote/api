@@ -17,7 +17,7 @@ function makeHtmlContent(name, jscontent) {
 		data[i].level + '</div>';
 	}
 	innerHtml = {
-		htmlcontent: '<div class="duolingo"><h1>Duolingo: ' +
+		htmlcontent: '<div class="duolingo"><h3>Duolingo: ' +
 		name + '</h1></div>' +
 		langs
 	};
@@ -29,7 +29,7 @@ router.get('/duolingo/badges/:login', function(req,resp){
 	memcache.connect(function() {
 		console.log("Connected to memcached");
 		userInfo = '';
-		
+
 		memcache.get("duolingo-info-" + req.params.login, function(err, memcacheResponse) {
 			if(err && err.type == 'NOT_FOUND') {
 				http.get('http://www.duolingo.com/users/' + req.params.login, function(res) {

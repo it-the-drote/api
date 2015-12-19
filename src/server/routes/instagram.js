@@ -10,8 +10,8 @@ function makeHtmlContent(name, jscontent) {
 	var template = fs.readFileSync('./public/js-templates/instagram-api.js').toString();
 	var picture = JSON.parse(jscontent).entry_data.ProfilePage[0].user.media.nodes[0].display_src;
 	innerHtml = {
-		htmlcontent: '<div class="instagram"><h1>Instagram: ' +
-		name + '</h1></div><div class="instagram"><img class="instagram-pic" src="' +
+		htmlcontent: '<div class="instagram"><h3>Instagram: ' +
+		name + '</h3></div><div class="instagram"><img class="instagram-pic" src="' +
 		picture + '"></img></div>'
 	};
 	return(format(template, innerHtml));
@@ -54,3 +54,5 @@ router.get('/instagram/lastphoto/:login', function(request, response) {
 			});
 	});
 });
+
+module.exports = router;
