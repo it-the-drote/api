@@ -9,7 +9,6 @@ var http = require('http');
 function makeHtmlContent(name, jscontent) {
 	var template = fs.readFileSync('./public/js-templates/instagram-api.js').toString();
 	var picture = JSON.parse(jscontent).entry_data.ProfilePage[0].user.media.nodes[0].display_src;
-	langs += '<div class="duolingo"><img src="http://api.it-the-drote.tk/static/img/countryballs/' +
 	innerHtml = {
 		htmlcontent: '<div class="instagram"><h1>Instagram: ' +
 		name + '</h1></div><div class="instagram"><img class="instagram-pic" src="' +
