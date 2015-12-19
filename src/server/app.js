@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var duolingoEndpoint = require('./routes/duolingo');
+var instagramEndpoint = require('./routes/instagram');
 var telegramEndpoint = require('./routes/telegram');
 
 var app = express();
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/', telegramEndpoint);
+app.use('/', instagramEndpoint);
 app.use('/', duolingoEndpoint);
 
 // catch 404 and forward to error handler
