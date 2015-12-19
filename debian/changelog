@@ -1,3 +1,9 @@
+apps-api (0.3-13) unstable; urgency=medium
+
+  * add some debug
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Sun, 20 Dec 2015 00:59:58 +0200
+
 apps-api (0.3-12) unstable; urgency=medium
 
   * Attempt to fix the build
