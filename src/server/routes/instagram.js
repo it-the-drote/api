@@ -27,6 +27,7 @@ router.get('/instagram/lastphoto/:login', function(request, response) {
 						function(res) {
 							var html = '';
 							res.on('data', function(chunk){
+								console.log("Chunk: " + chunk);
 								html += chunk;
 							});
 							res.on('end', function() {
