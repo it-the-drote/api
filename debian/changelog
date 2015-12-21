@@ -1,3 +1,9 @@
+apps-api (0.3-15) unstable; urgency=medium
+
+  * Debug log chunk
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 21 Dec 2015 13:37:33 +0200
+
 apps-api (0.3-14) unstable; urgency=medium
 
   * debug html output
