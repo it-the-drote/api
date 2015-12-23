@@ -23,7 +23,7 @@ router.get('/instagram/lastphoto/:login', function(request, response) {
 		memcache.get("instagram-info-" + request.params.login,
 			function(err, memcacheResponse) {
 				if(err && err.type == 'NOT_FOUND') {
-					https.get('https://www.instagram.com/' + request.params.login,
+					https.get('https://www.instagram.com/' + request.params.login + '/',
 						function(res) {
 							console.log(res.headers);
 							console.log("Code: " + res.statusCode);
