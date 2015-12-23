@@ -9,7 +9,7 @@ var routes = require('./routes/index');
 var duolingoEndpoint = require('./routes/duolingo');
 var instagramEndpoint = require('./routes/instagram');
 var telegramEndpoint = require('./routes/telegram');
-var webhookEndpoint = require('./routes/telegram');
+var webhookEndpoint = require('./routes/webhook');
 
 var app = express();
 
