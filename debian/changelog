@@ -1,3 +1,9 @@
+apps-api (0.4-6) unstable; urgency=medium
+
+  * Remove sigchld handling
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 23 Dec 2015 18:54:16 +0200
+
 apps-api (0.4-5) unstable; urgency=medium
 
   * Proper status messages
