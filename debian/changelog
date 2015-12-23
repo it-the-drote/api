@@ -1,3 +1,9 @@
+apps-api (0.4-4) unstable; urgency=medium
+
+  * Remove deprecated functions
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 23 Dec 2015 18:28:48 +0200
+
 apps-api (0.4-3) unstable; urgency=medium
 
   * Finish webhook request properly

@@ -1,12 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
-var sys = require('sys');
 var exec = require('child_process').exec;
 var settings = require('/etc/datasources/apps-api.json');
 
 function puts(error, stdout, stderr) {
-	sys.puts(stdout);
+	console.log(stdout);
 }
 
 router.post('/webhook/mdblog', function(req, res) {
