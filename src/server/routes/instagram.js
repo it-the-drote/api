@@ -25,6 +25,7 @@ router.get('/instagram/lastphoto/:login', function(request, response) {
 				if(err && err.type == 'NOT_FOUND') {
 					https.get('https://www.instagram.com/' + request.params.login,
 						function(res) {
+							console.log(res.headers);
 							var html = '';
 							res.on('data', function(chunk){
 								console.log("Chunk: " + chunk);
@@ -36,7 +37,7 @@ router.get('/instagram/lastphoto/:login', function(request, response) {
 								var rawData = html.match(re);
 								process.stdout.write("rawData: " + rawData);
 								re = /\{.*\}/;
-								var jsonData = rawData[0].match(re)[0];
+								var jsonData = rawData[0].match(re);
 								memcache.set("instagram-info-" + request.params.login,
 									jsonData,
 									{flags: 0, exptime: 300},
