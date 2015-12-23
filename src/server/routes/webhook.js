@@ -16,7 +16,7 @@ router.post('/webhook/mdblog', function(req, res) {
 				exec('git pull origin master', puts);
 				res.send("OK\n");
 			} else {
-				res.send("Wrong token\n");
+				res.status(401).send("Wrong token\n");
 			}
 		}
 	} catch(err) {
@@ -27,6 +27,7 @@ router.post('/webhook/mdblog', function(req, res) {
 				res.send("OK\n");
 			} catch(e) {
 				console.log("Unable to clone repository:" + e.message);
+				res.status(500).send("Unable to clone repository: " + e.message + "\n");
 			}
 		}
 	}
