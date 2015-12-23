@@ -26,6 +26,7 @@ router.get('/instagram/lastphoto/:login', function(request, response) {
 					https.get('https://www.instagram.com/' + request.params.login,
 						function(res) {
 							console.log(res.headers);
+							console.log("Code: " + res.statusCode);
 							var html = '';
 							res.on('data', function(chunk){
 								console.log("Chunk: " + chunk);
