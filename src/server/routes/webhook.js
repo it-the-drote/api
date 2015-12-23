@@ -25,6 +25,7 @@ router.post('/webhook/mdblog', function(req, res) {
 			try {
 				process.chdir('/home/apps/it-the-drote/');
 				exec('git clone https://github.com/Like-all/markdown-articles markdown-content', puts);
+				res.send("OK\n");
 			} catch(e) {
 				console.log("Unable to clone repository:" + e.message);
 			}
