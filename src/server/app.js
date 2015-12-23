@@ -9,6 +9,7 @@ var routes = require('./routes/index');
 var duolingoEndpoint = require('./routes/duolingo');
 var instagramEndpoint = require('./routes/instagram');
 var telegramEndpoint = require('./routes/telegram');
+var webhookEndpoint = require('./routes/telegram');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use('/', routes);
 app.use('/', telegramEndpoint);
 app.use('/', instagramEndpoint);
 app.use('/', duolingoEndpoint);
+app.use('/', webhookEndpoint);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
