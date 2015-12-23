@@ -7,10 +7,10 @@ var https = require('https');
 var http = require('http');
 
 function makeHtmlContent(name, jscontent) {
-	var template = fs.readFileSync('./public/js-templates/instagram-api.js').toString();
+	var template = fs.readFileSync('./public/js-templates/lastfm-api.js').toString();
 	var picture = JSON.parse(jscontent).entry_data.ProfilePage[0].user.media.nodes[0].display_src;
 	innerHtml = {
-		htmlcontent: '<div class="instagram"><h3>Instagram: ' +
+		htmlcontent: '<div class="lastfm"><h3>Last.FM: ' +
 		name + '</h3></div><div class="instagram"><img class="instagram-pic" src="' +
 		picture + '"></img></div>'
 	};
