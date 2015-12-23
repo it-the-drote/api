@@ -47,8 +47,8 @@ process.on('SIGINT', function() {
 });
 process.on('SIGCHLD', function() {
     console.log("Caught SIGCHLD signal");
-    fs.unlinkSync(settings.socketPath);
-    process.exit();
+    //fs.unlinkSync(settings.socketPath);
+    //process.exit();
 });
 process.on('SIGTERM', function() {
     console.log("Caught SIGCHLD signal");
