@@ -39,7 +39,7 @@ router.get('/instagram/lastphoto/:login', function(request, response) {
 									{flags: 0, exptime: 300},
 									function(err, status) {
 										console.log("Memcache status: " + status);
-										console.log("Memcache error: " + err);
+										console.log("Memcache error: " + JSON.stringify(err));
 									});
 								response.setHeader("Content-Type", "application/javascript");
 								response.send(makeHtmlContent(request.params.login,
