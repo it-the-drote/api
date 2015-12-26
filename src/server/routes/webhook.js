@@ -9,6 +9,7 @@ function puts(error, stdout, stderr) {
 }
 
 router.post('/webhook/mdblog', function(req, res) {
+	console.log("Token: " + req.query.token);
 	try {
 		if (fs.statSync('/home/apps/it-the-drote/markdown-content/')) {
 			if (req.body.token == settings.webhookToken) {
