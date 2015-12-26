@@ -1,3 +1,9 @@
+apps-api (0.4-8) unstable; urgency=medium
+
+  * Use token from query string
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Sat, 26 Dec 2015 23:39:31 +0200
+
 apps-api (0.4-7) unstable; urgency=medium
 
   * Debug output token

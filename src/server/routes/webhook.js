@@ -9,10 +9,9 @@ function puts(error, stdout, stderr) {
 }
 
 router.post('/webhook/mdblog', function(req, res) {
-	console.log("Token: " + req.query.token);
 	try {
 		if (fs.statSync('/home/apps/it-the-drote/markdown-content/')) {
-			if (req.body.token == settings.webhookToken) {
+			if (req.query.token == settings.webhookToken) {
 				process.chdir('/home/apps/it-the-drote/markdown-content/');
 				exec('git pull origin master', puts);
 				res.send("OK\n");
