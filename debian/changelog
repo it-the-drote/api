@@ -1,3 +1,9 @@
+apps-api (0.4-7) unstable; urgency=medium
+
+  * Debug output token
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Sat, 26 Dec 2015 22:28:28 +0200
+
 apps-api (0.4-6) unstable; urgency=medium
 
   * Remove sigchld handling
