@@ -1,3 +1,9 @@
+apps-api (0.4-11) unstable; urgency=medium
+
+  * Debugging memcache in instagram endpoint
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Sun, 27 Dec 2015 01:49:37 +0200
+
 apps-api (0.4-10) unstable; urgency=medium
 
   * Apply css rule to the whole block
