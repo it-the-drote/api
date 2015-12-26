@@ -27,22 +27,19 @@ router.get('/instagram/lastphoto/:login', function(request, response) {
 						function(res) {
 							var html = '';
 							res.on('data', function(chunk){
-								console.log("Chunk: " + chunk);
 								html += chunk;
 							});
 							res.on('end', function() {
 								var re = /<script type="text\/javascript">window\._sharedData.*<\/script>/;
-								process.stdout.write("htmlData: " + html);
 								var rawData = html.match(re);
-								process.stdout.write("rawData: " + rawData);
 								re = /\{.*\}/;
 								var jsonData = rawData[0].match(re);
 								memcache.set("instagram-info-" + request.params.login,
 									jsonData,
 									{flags: 0, exptime: 300},
 									function(err, status) {
-										console.log(status);
-										console.log(err);
+										console.log("Memcache status: " + status);
+										console.log("Memcache error: " + err);
 									});
 								response.setHeader("Content-Type", "application/javascript");
 								response.send(makeHtmlContent(request.params.login,
