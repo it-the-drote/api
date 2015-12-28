@@ -8,7 +8,7 @@ var http = require('http');
 
 function makeHtmlContent(name, jscontent) {
 	var template = fs.readFileSync('./public/js-templates/instagram-api.js').toString();
-	var picture = JSON.parse(jscontent).entry_data.ProfilePage[0].user.media.nodes[0].display_src;
+	var picture = JSON.parse(jscontent).display_src;
 	innerHtml = {
 		htmlcontent: '<div class="instagram"><h3>Instagram: ' +
 		name + '</h3></div><div class="instagram"><img class="instagram-pic" src="' +
@@ -33,7 +33,7 @@ router.get('/instagram/lastphoto/:login', function(request, response) {
 								var re = /<script type="text\/javascript">window\._sharedData.*<\/script>/;
 								var rawData = html.match(re);
 								re = /\{.*\}/;
-								var jsonData = rawData[0].match(re);
+								var jsonData = JSON.stringify(JSON.parse(rawData[0].match(re)).entry_data.ProfilePage[0].user.media.nodes[0]);
 								console.log(jsonData);
 								memcache.set("instagram-info-" + request.params.login,
 									jsonData,

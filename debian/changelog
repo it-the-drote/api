@@ -1,3 +1,9 @@
+apps-api (0.4-14) unstable; urgency=medium
+
+  * Parse json content before adding it to memcache
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 28 Dec 2015 15:47:42 +0200
+
 apps-api (0.4-13) unstable; urgency=medium
 
   * debug json output
