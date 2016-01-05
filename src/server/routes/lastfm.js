@@ -8,36 +8,36 @@ var http = require('http');
 
 function makeHtmlContent(name, jscontent) {
 	var template = fs.readFileSync('./public/js-templates/lastfm-api.js').toString();
-	var picture = JSON.parse(jscontent).entry_data.ProfilePage[0].user.media.nodes[0].display_src;
+	var info = JSON.parse(jscontent).recenttracks.track[0];
+	var albumArt = info.image[3].#text;
+	var trackUrl = info.url;
+	var trackTitle = info.name;
+	var trackArtist = info.artist.#text;
+	var trackAlbum = info.album.#text
 	innerHtml = {
-		htmlcontent: '<div class="lastfm"><h3>Last.FM: ' +
-		name + '</h3></div><div class="instagram"><img class="instagram-pic" src="' +
-		picture + '"></img></div>'
+		htmlcontent: '<div class="lastfm"><h3>Now playing: ' +
+		name + '</h3></div><div class="lastfm"><img class="lastfm-pic" src="' +
+		albumArt + '"></img></div><div class="alert alert-warning">' +
+		'<a href="' + trackUrl + '">' + trackArtist + ' - ' + trackTitle + '</a></div>'
 	};
 	return(format(template, innerHtml));
 }
 
-router.get('/instagram/lastphoto/:login', function(request, response) {
+router.get('/lastfm/nowplaying/:login', function(request, response) {
 	var memcache = new mc.Client();
 	memcache.connect(function() {
-		memcache.get("instagram-info-" + request.params.login,
+		memcache.get("lastfm-info-" + request.params.login,
 			function(err, memcacheResponse) {
 				if(err && err.type == 'NOT_FOUND') {
-					https.get('https://www.instagram.com/' + request.params.login + '/',
+					https.get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=' + request.params.login + '&api_key=f4ba050b95c9cd5dad4f5187349fe89d&format=json&limit=1',
 						function(res) {
-							var html = '';
+							var jsonData = '';
 							res.on('data', function(chunk){
 								console.log("Chunk: " + chunk);
-								html += chunk;
+								jsonData += chunk;
 							});
 							res.on('end', function() {
-								var re = /<script type="text\/javascript">window\._sharedData.*<\/script>/;
-								process.stdout.write("htmlData: " + html);
-								var rawData = html.match(re);
-								process.stdout.write("rawData: " + rawData);
-								re = /\{.*\}/;
-								var jsonData = rawData[0].match(re);
-								memcache.set("instagram-info-" + request.params.login,
+								memcache.set("lastfm-info-" + request.params.login,
 									jsonData,
 									{flags: 0, exptime: 300},
 									function(err, status) {
@@ -52,7 +52,7 @@ router.get('/instagram/lastphoto/:login', function(request, response) {
 				} else {
 					response.setHeader("Content-Type", "application/javascript");
 					response.send(makeHtmlContent(request.params.login,
-						memcacheResponse['instagram-info-' + request.params.login]));
+						memcacheResponse['lastfm-info-' + request.params.login]));
 				}
 			});
 	});
