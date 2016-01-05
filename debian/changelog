@@ -1,3 +1,9 @@
+apps-api (0.5-9) unstable; urgency=medium
+
+  * badge number position fix
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 05 Jan 2016 21:30:09 +0300
+
 apps-api (0.5-8) unstable; urgency=medium
 
   * Use proper path for countryballs
