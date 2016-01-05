@@ -9,6 +9,7 @@ var routes = require('./routes/index');
 var duolingoEndpoint = require('./routes/duolingo');
 var instagramEndpoint = require('./routes/instagram');
 var telegramEndpoint = require('./routes/telegram');
+var lastfmEndpoint = require('./routes/lastfm');
 var webhookEndpoint = require('./routes/webhook');
 
 var app = express();
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/', telegramEndpoint);
 app.use('/', instagramEndpoint);
+app.use('/', lastfmEndpoint);
 app.use('/', duolingoEndpoint);
 app.use('/', webhookEndpoint);
 
