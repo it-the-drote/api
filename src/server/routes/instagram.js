@@ -4,7 +4,6 @@ var fs = require('fs');
 var mc = require('mc');
 var format = require('string-template');
 var https = require('https');
-var http = require('http');
 
 function makeHtmlContent(name, jscontent) {
 	var template = fs.readFileSync('./public/js-templates/instagram-api.js').toString();

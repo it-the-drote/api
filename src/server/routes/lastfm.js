@@ -5,6 +5,7 @@ var mc = require('mc');
 var format = require('string-template');
 var https = require('https');
 var http = require('http');
+var settings = require('/etc/datasources/apps-api.json');
 
 function makeHtmlContent(name, jscontent) {
 	var template = fs.readFileSync('./public/js-templates/lastfm-api.js').toString();
@@ -29,7 +30,9 @@ router.get('/lastfm/nowplaying/:login', function(request, response) {
 		memcache.get("lastfm-info-" + request.params.login,
 			function(err, memcacheResponse) {
 				if(err && err.type == 'NOT_FOUND') {
-					https.get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=' + request.params.login + '&api_key=f4ba050b95c9cd5dad4f5187349fe89d&format=json&limit=1',
+					https.get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=' +
+						request.params.login + '&api_key=' +
+						settings.lastfmToken + '&format=json&limit=1',
 						function(res) {
 							var jsonData = '';
 							res.on('data', function(chunk){
