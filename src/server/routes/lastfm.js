@@ -9,11 +9,11 @@ var http = require('http');
 function makeHtmlContent(name, jscontent) {
 	var template = fs.readFileSync('./public/js-templates/lastfm-api.js').toString();
 	var info = JSON.parse(jscontent).recenttracks.track[0];
-	var albumArt = info.image[3].\#text;
+	var albumArt = info.image[3]['#text'];
 	var trackUrl = info.url;
 	var trackTitle = info.name;
-	var trackArtist = info.artist.\#text;
-	var trackAlbum = info.album.\#text
+	var trackArtist = info.artist['#text'];
+	var trackAlbum = info.album['#text'];
 	innerHtml = {
 		htmlcontent: '<div class="lastfm"><h3>Now playing: ' +
 		name + '</h3></div><div class="lastfm"><img class="lastfm-pic" src="' +
