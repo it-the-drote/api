@@ -14,6 +14,7 @@ router.post('/webhook/mdblog', function(req, res) {
 			if (req.query.token == settings.webhookToken) {
 				process.chdir('/home/apps/it-the-drote/markdown-content/');
 				exec('git pull origin master', puts);
+				process.chdir('/opt/apps-api/');
 				res.send("OK\n");
 			} else {
 				res.status(401).send("Wrong token\n");
@@ -24,6 +25,7 @@ router.post('/webhook/mdblog', function(req, res) {
 			try {
 				process.chdir('/home/apps/it-the-drote/');
 				exec('git clone https://github.com/Like-all/markdown-articles markdown-content', puts);
+				process.chdir('/opt/apps-api/');
 				res.send("OK\n");
 			} catch(e) {
 				console.log("Unable to clone repository:" + e.message);
