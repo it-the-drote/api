@@ -1,3 +1,9 @@
+apps-api (0.5-8) unstable; urgency=medium
+
+  * Use proper path for countryballs
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 05 Jan 2016 20:15:31 +0200
+
 apps-api (0.5-7) unstable; urgency=medium
 
   * Use images from dev
