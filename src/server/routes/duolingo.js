@@ -13,7 +13,7 @@ function makeHtmlContent(name, jscontent) {
 	for(var i = 0; i < data.length; i++) {
 		langs += '<div class="duolingo"><img src="http://api.it-the-drote.tk/static/img/countryballs/' +
 		data[i].language +
-		'.png"></img><div class="duolingo-counter">Level ' +
+		'.png"></img><div class="duolingo-counter">' +
 		data[i].level + '</div>';
 	}
 	innerHtml = {

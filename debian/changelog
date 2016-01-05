@@ -1,3 +1,9 @@
+apps-api (0.5-6) unstable; urgency=medium
+
+  * New badges
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 05 Jan 2016 19:54:08 +0200
+
 apps-api (0.5-5) unstable; urgency=medium
 
   * Use lastfm route
