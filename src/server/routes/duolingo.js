@@ -11,7 +11,7 @@ function makeHtmlContent(name, jscontent) {
 	var langs = '';
 	var data = JSON.parse(jscontent);
 	for(var i = 0; i < data.length; i++) {
-		langs += '<div class="duolingo"><img src="http://api.it-the-drote.tk/static/img/countryballs/' +
+		langs += '<div class="duolingo"><img src="http://api.dev.it-the-drote.tk/static/img/countryballs/' +
 		data[i].language +
 		'.png"></img><div class="duolingo-counter">' +
 		data[i].level + '</div>';
