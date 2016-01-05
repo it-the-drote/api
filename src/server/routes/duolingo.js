@@ -3,15 +3,23 @@ var router = express.Router();
 var fs = require('fs');
 var mc = require('mc');
 var format = require('string-template');
-var https = require('https');
 var http = require('http');
+var env = require('/usr/lib/apps-environment/javascript/getenvironment.js').getEnv();
+var hostname = '';
+
+if(env == 'development') {
+	hostname = 'dev.it-the-drote.tk';
+} else {
+	hostname = 'it-the-drote.tk';
+}
 
 function makeHtmlContent(name, jscontent) {
 	var template = fs.readFileSync('./public/js-templates/duolingo-api.js').toString();
 	var langs = '';
 	var data = JSON.parse(jscontent);
 	for(var i = 0; i < data.length; i++) {
-		langs += '<div class="duolingo"><img src="http://api.dev.it-the-drote.tk/static/img/countryballs/' +
+		langs += '<div class="duolingo"><img src="http://api.' + 
+		hostname + '/static/img/countryballs/' +
 		data[i].language +
 		'.png"></img><div class="duolingo-counter">' +
 		data[i].level + '</div>';
