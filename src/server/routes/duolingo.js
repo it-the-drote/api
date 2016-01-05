@@ -25,8 +25,8 @@ function makeHtmlContent(name, jscontent) {
 		data[i].level + '</div>';
 	}
 	innerHtml = {
-		htmlcontent: '<div class="duolingo"><h3>Duolingo: ' +
-		name + '</h1></div>' +
+		htmlcontent: '<div class="duolingo"><a href="https://duolingo.com/' + name +
+		'"><h3>Duolingo</h3></a></div>' +
 		langs
 	};
 	return(format(template, innerHtml));
