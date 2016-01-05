@@ -21,5 +21,11 @@ server {
         root /usr/share/apps-api;
         autoindex on;
         charset utf-8;
+        add_header Cache-Control "public";
+        expires 1M;
+        gzip on;
+        gzip_min_length 1000;
+        gzip_proxied    expired no-cache no-store private auth;
+        gzip_types  text/css application/javascript;
     }
 }
