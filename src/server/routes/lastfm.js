@@ -16,8 +16,8 @@ function makeHtmlContent(name, jscontent) {
 	var trackArtist = info.artist['#text'];
 	var trackAlbum = info.album['#text'];
 	innerHtml = {
-		htmlcontent: '<div class="lastfm"><h3>Now playing: ' +
-		name + '</h3></div><div class="lastfm"><img class="lastfm-pic" src="' +
+		htmlcontent: '<div class="lastfm"><a href="http://www.last.fm/user/' + name + 
+		'"><h3>Now playing</h3></a></div><div class="lastfm"><img class="lastfm-pic" src="' +
 		albumArt + '"></img></div><div class="alert alert-warning">' +
 		'<a href="' + trackUrl + '">' + trackArtist + ' - ' + trackTitle + '</a></div>'
 	};
