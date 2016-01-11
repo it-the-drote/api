@@ -33,7 +33,6 @@ router.get('/instagram/lastphoto/:login', function(request, response) {
 								var rawData = html.match(re);
 								re = /\{.*\}/;
 								var jsonData = JSON.stringify(JSON.parse(rawData[0].match(re)).entry_data.ProfilePage[0].user.media.nodes[0]);
-								console.log(jsonData);
 								memcache.set("instagram-info-" + request.params.login,
 									jsonData,
 									{flags: 0, exptime: 300},

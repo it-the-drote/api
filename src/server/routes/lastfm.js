@@ -36,7 +36,6 @@ router.get('/lastfm/nowplaying/:login', function(request, response) {
 						function(res) {
 							var jsonData = '';
 							res.on('data', function(chunk){
-								console.log("Chunk: " + chunk);
 								jsonData += chunk;
 							});
 							res.on('end', function() {

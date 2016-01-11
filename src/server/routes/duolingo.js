@@ -50,7 +50,6 @@ router.get('/duolingo/badges/:login', function(req,resp){
 							console.log(status);
 							console.log(err);
 						});
-						console.log('data is taken from the web');
 						resp.setHeader("Content-Type", "application/javascript");
 						resp.send(makeHtmlContent(req.params.login, JSON.stringify(JSON.parse(userInfo).languages)));
 					});
@@ -58,7 +57,6 @@ router.get('/duolingo/badges/:login', function(req,resp){
 			} else {
 				resp.setHeader("Content-Type", "application/javascript");
 				resp.send(makeHtmlContent(req.params.login, memcacheResponse['duolingo-info-' + req.params.login]));
-				console.log('data is taken from the memcache');
 			}
 		});
 	});
