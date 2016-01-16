@@ -54,9 +54,11 @@ router.get('/duolingo/badges/:login', function(req,resp){
 								console.log('Duolingo Memcache: ' + status);
 								console.log('Duolingo Memcache error: ' + err);
 							});
+						} else {
+							console.log('Can\'t parse userinfo:' + userInfo);
 						}
 					} catch (e) {
-						console.log(e);
+						console.log('Something went wrong:' + e);
 					}
 					res.on('end', function() {
 						resp.setHeader("Content-Type", "application/javascript");
