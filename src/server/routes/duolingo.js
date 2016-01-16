@@ -48,14 +48,14 @@ router.get('/duolingo/badges/:login', function(req,resp){
 					var jsonData = '{}';
 					try {
 						jsonData = JSON.stringify(JSON.parse(userInfo).languages);
-					} catch (e) {
-						console.log(e);
-					}
-					res.on('end', function() {
 						memcache.set("duolingo-info-" + req.params.login, jsonData, {flags: 0, exptime: 10800}, function(err, status) {
 							console.log(status);
 							console.log(err);
 						});
+					} catch (e) {
+						console.log(e);
+					}
+					res.on('end', function() {
 						resp.setHeader("Content-Type", "application/javascript");
 						resp.send(makeHtmlContent(req.params.login, jsonData));
 					});
