@@ -1,3 +1,9 @@
+apps-api (0.5-14) unstable; urgency=medium
+
+  * Fault-tolerant duolingo endpoint.
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Sat, 16 Jan 2016 14:06:24 +0300
+
 apps-api (0.5-13) unstable; urgency=medium
 
   * Strip debug
