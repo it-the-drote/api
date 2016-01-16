@@ -8,6 +8,11 @@ var settings = require('/etc/datasources/apps-api.json');
 
 var server = http.createServer(app);
 
+if(fs.statSync(settings.socketPath)) {
+    fs.unlinkSync(settings.socketPath);
+    console.log('Socket ' + settings.socketPath + ' exists! Removing...');
+}
+
 server.listen(settings.socketPath);
 fs.chmodSync(settings.socketPath, 0666);
 server.on('error', onError);
