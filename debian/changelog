@@ -1,3 +1,9 @@
+apps-api (0.5-20) unstable; urgency=medium
+
+  * Blah
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Sat, 16 Jan 2016 18:15:40 +0300
+
 apps-api (0.5-19) unstable; urgency=medium
 
   * Parse error wraparound
