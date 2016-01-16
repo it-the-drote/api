@@ -1,3 +1,9 @@
+apps-api (0.5-19) unstable; urgency=medium
+
+  * Parse error wraparound
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Sat, 16 Jan 2016 18:13:03 +0300
+
 apps-api (0.5-18) unstable; urgency=medium
 
   * Do not store duolingo-info on parse error

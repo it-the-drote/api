@@ -47,11 +47,12 @@ router.get('/duolingo/badges/:login', function(req,resp){
 					});
 					var jsonData = '{}';
 					try {
-						jsonData = JSON.stringify(JSON.parse(userInfo).languages);
-						memcache.set("duolingo-info-" + req.params.login, jsonData, {flags: 0, exptime: 10800}, function(err, status) {
-							console.log(status);
-							console.log(err);
-						});
+						if(jsonData = JSON.stringify(JSON.parse(userInfo).languages)) {
+							memcache.set("duolingo-info-" + req.params.login, jsonData, {flags: 0, exptime: 10800}, function(err, status) {
+								console.log(status);
+								console.log(err);
+							});
+						}
 					} catch (e) {
 						console.log(e);
 					}
