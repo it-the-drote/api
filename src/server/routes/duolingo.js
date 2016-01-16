@@ -44,6 +44,7 @@ router.get('/duolingo/badges/:login', function(req,resp){
 					res.setEncoding('utf8');
 					res.on('data', function(chunk) {
 						userInfo += chunk;
+						console.log('Got chunk: ' + chunk);
 					});
 					var jsonData = '{}';
 					try {
