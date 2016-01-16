@@ -58,7 +58,7 @@ router.get('/duolingo/badges/:login', function(req,resp){
 							console.log('Can\'t parse userinfo:' + userInfo);
 						}
 					} catch (e) {
-						console.log('Something went wrong:' + e);
+						console.log('Something went wrong: ' + e + '\nGot userinfo: ' + userInfo);
 					}
 					res.on('end', function() {
 						resp.setHeader("Content-Type", "application/javascript");
