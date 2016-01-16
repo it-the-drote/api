@@ -1,3 +1,9 @@
+apps-api (0.5-26) unstable; urgency=medium
+
+  * Put try-catch in the right place
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Sat, 16 Jan 2016 23:28:14 +0300
+
 apps-api (0.5-25) unstable; urgency=medium
 
   * Log chunks

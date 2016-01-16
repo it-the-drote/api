@@ -44,24 +44,23 @@ router.get('/duolingo/badges/:login', function(req,resp){
 					res.setEncoding('utf8');
 					res.on('data', function(chunk) {
 						userInfo += chunk;
-						console.log('Got chunk: ' + chunk);
 					});
 					var jsonData = '{}';
-					try {
-						if(JSON.stringify(JSON.parse(userInfo).languages)) {
-							jsonData = JSON.stringify(JSON.parse(userInfo).languages);
-							console.log('Duolingo JSON data' + jsonData);
-							memcache.set("duolingo-info-" + req.params.login, jsonData, {flags: 0, exptime: 10800}, function(err, status) {
-								console.log('Duolingo Memcache: ' + status);
-								console.log('Duolingo Memcache error: ' + err);
-							});
-						} else {
-							console.log('Can\'t parse userinfo:' + userInfo);
-						}
-					} catch (e) {
-						console.log('Something went wrong: ' + e + '\nGot userinfo: ' + userInfo);
-					}
 					res.on('end', function() {
+						try {
+							if(JSON.stringify(JSON.parse(userInfo).languages)) {
+								jsonData = JSON.stringify(JSON.parse(userInfo).languages);
+								console.log('Duolingo JSON data:' + jsonData);
+								memcache.set("duolingo-info-" + req.params.login, jsonData, {flags: 0, exptime: 10800}, function(err, status) {
+									console.log('Duolingo Memcache: ' + status);
+									console.log('Duolingo Memcache error: ' + err);
+								});
+							} else {
+								console.log('Can\'t parse userinfo:' + userInfo);
+							}
+						} catch (e) {
+							console.log('Something went wrong: ' + e + '\nGot userinfo: ' + userInfo);
+						}
 						resp.setHeader("Content-Type", "application/javascript");
 						resp.send(makeHtmlContent(req.params.login, jsonData));
 					});
