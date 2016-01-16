@@ -1,3 +1,9 @@
+apps-api (0.5-23) unstable; urgency=medium
+
+  * More debug
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Sat, 16 Jan 2016 18:32:32 +0300
+
 apps-api (0.5-22) unstable; urgency=medium
 
   * Debug
