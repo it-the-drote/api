@@ -49,9 +49,10 @@ router.get('/duolingo/badges/:login', function(req,resp){
 					try {
 						if(JSON.stringify(JSON.parse(userInfo).languages)) {
 							jsonData = JSON.stringify(JSON.parse(userInfo).languages);
+							console.log('Duolingo JSON data' + jsonData);
 							memcache.set("duolingo-info-" + req.params.login, jsonData, {flags: 0, exptime: 10800}, function(err, status) {
-								console.log(status);
-								console.log(err);
+								console.log('Duolingo Memcache: ' + status);
+								console.log('Duolingo Memcache error: ' + err);
 							});
 						}
 					} catch (e) {
