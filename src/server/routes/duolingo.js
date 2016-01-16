@@ -57,7 +57,7 @@ router.get('/duolingo/badges/:login', function(req,resp){
 							console.log(err);
 						});
 						resp.setHeader("Content-Type", "application/javascript");
-						resp.send(makeHtmlContent(req.params.login, jsonData);
+						resp.send(makeHtmlContent(req.params.login, jsonData));
 					});
 				});
 			} else {
