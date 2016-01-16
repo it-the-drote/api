@@ -28,18 +28,25 @@ router.get('/instagram/lastphoto/:login', function(request, response) {
 							res.on('data', function(chunk){
 								html += chunk;
 							});
+							var jsonData = '{}';
 							res.on('end', function() {
 								var re = /<script type="text\/javascript">window\._sharedData.*<\/script>/;
 								var rawData = html.match(re);
 								re = /\{.*\}/;
-								var jsonData = JSON.stringify(JSON.parse(rawData[0].match(re)).entry_data.ProfilePage[0].user.media.nodes[0]);
-								memcache.set("instagram-info-" + request.params.login,
-									jsonData,
-									{flags: 0, exptime: 300},
-									function(err, status) {
-										console.log("Memcache status: " + status);
-										console.log("Memcache error: " + JSON.stringify(err));
-									});
+								try {
+									if(JSON.stringify(JSON.parse(rawData[0].match(re)).entry_data.ProfilePage[0].user.media.nodes[0])) {
+										jsonData = JSON.stringify(JSON.parse(rawData[0].match(re)).entry_data.ProfilePage[0].user.media.nodes[0]);
+										memcache.set("instagram-info-" + request.params.login,
+											jsonData,
+											{flags: 0, exptime: 300},
+											function(err, status) {
+												console.log("Instagram memcache status: " + status);
+												console.log("Instagram memcache error: " + JSON.stringify(err));
+											});
+									}
+								} catch(e) {
+									console.log('Something went wrong: ' + e + '\nGot data: ' + rawData);
+								}
 								response.setHeader("Content-Type", "application/javascript");
 								response.send(makeHtmlContent(request.params.login,
 									jsonData));
