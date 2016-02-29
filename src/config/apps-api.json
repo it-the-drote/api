@@ -2,6 +2,7 @@
     "pisunBotToken": "74deccb9-b44f-4394-9389-b308218ecbe2",
     "webhookToken": "5dacf193-4735-4822-a557-23af20c6319c",
     "lastfmToken": "f4ba050b95c9cd5dad4f5187349fe89d",
+    "sensuApiCredentials": "admin:6zUP68yw7L",
     "pisunBotRecipient": 66653616,
     "socketPath": "/tmp/apps-api.sock"
 }
