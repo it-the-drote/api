@@ -1,3 +1,9 @@
+apps-api (0.5-33) unstable; urgency=medium
+
+  * Enable board endpoints
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 29 Feb 2016 21:55:45 +0300
+
 apps-api (0.5-32) unstable; urgency=medium
 
   * Implement CPU metrics
