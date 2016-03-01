@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+while :; do
+    cpu_usage=`top -bn1 | grep "Cpu(s)" | \
+               sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | \
+               awk '{print 100 - $1}'`
+
+    mem_usage=`free | grep Mem | awk '{print $3/$2 * 100.0}'`
+
+    disk_usage=`df -hl | awk '/^\/dev\/[sv]d[ab]/ { sum+=$5 } END { print sum }'`
+
+    echo '{ "cpu": { "usage":'$cpu_usage'},
+            "memory": { "usage":'$mem_usage'},
+            "disk": { "usage":'$disk_usage' }}' >> /tmp/usage.json
+    sleep 5
+done
