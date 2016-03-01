@@ -1,3 +1,9 @@
+apps-api (0.5-37) unstable; urgency=medium
+
+  * Rewrite json instead of appending
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 01 Mar 2016 14:51:23 +0300
+
 apps-api (0.5-36) unstable; urgency=medium
 
   * Fix jshint errors and include fs library
