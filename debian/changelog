@@ -1,3 +1,9 @@
+apps-api (0.5-36) unstable; urgency=medium
+
+  * Fix jshint errors and include fs library
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 01 Mar 2016 14:47:23 +0300
+
 apps-api (0.5-35) unstable; urgency=medium
 
   * Real system usage endpoints
