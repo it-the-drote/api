@@ -11,6 +11,6 @@ while :; do
 
     echo '{ "cpu": { "usage":'$cpu_usage'},
             "memory": { "usage":'$mem_usage'},
-            "disk": { "usage":'$disk_usage' }}' >> /tmp/usage.json
+            "disk": { "usage":'$disk_usage' }}' > /tmp/usage.json
     sleep 5
 done
