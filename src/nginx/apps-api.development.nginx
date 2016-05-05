@@ -28,4 +28,8 @@ server {
         gzip_proxied    expired no-cache no-store private auth;
         gzip_types  text/css application/javascript;
     }
+    location /status {
+        root /opt/apps-api/public;
+        charset utf-8;
+    }
 }
