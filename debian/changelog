@@ -1,3 +1,9 @@
+apps-api (0.5-39) unstable; urgency=medium
+
+  * Enable CORS on /status/
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Thu, 05 May 2016 12:19:27 +0300
+
 apps-api (0.5-38) unstable; urgency=medium
 
   * Server status example
