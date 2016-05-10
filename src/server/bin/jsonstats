@@ -5,7 +5,7 @@ mkdir /tmp/jsonstats
 cd /opt/apps-api/bin/plugins
 
 for i in `ls`; do
-    $i
+    ./$i
 done
 
 cat << EOF > /opt/apps-api/public/status/status.json
