@@ -1,3 +1,9 @@
+apps-api (0.5-45) unstable; urgency=medium
+
+  * Properly parse chat id
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 04 Jul 2016 19:14:02 +0300
+
 apps-api (0.5-44) unstable; urgency=medium
 
   * Fetch default chat id from file
