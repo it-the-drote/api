@@ -1,3 +1,9 @@
+apps-api (0.5-43) unstable; urgency=medium
+
+  * Fool mkdir command
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 04 Jul 2016 17:16:37 +0300
+
 apps-api (0.5-42) unstable; urgency=medium
 
   * Fix permissions and scripts execution
