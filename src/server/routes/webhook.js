@@ -35,8 +35,7 @@ router.post('/webhook/mdblog', function(req, res) {
 	}
 });
 router.post('/webhook/build-deb', function(req, res){
-	console.log("POST parameters: " + JSON.stringify(req.query, null, '\t'));
-	console.log("Request parameters: " + req.params.repo);
+	console.log("POST parameters: " + req.query.repo);
 	res.send("OK\n");
 });
 
