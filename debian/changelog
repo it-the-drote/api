@@ -1,3 +1,9 @@
+apps-api (0.5-49) unstable; urgency=medium
+
+  * Request object to string
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 05 Aug 2016 23:42:47 +0300
+
 apps-api (0.5-48) unstable; urgency=medium
 
   * Build the package
