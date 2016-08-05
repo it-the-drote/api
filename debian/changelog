@@ -1,6 +1,7 @@
 apps-api (0.5-52) unstable; urgency=medium
 
   * Build the package
+  * Test
 
  -- Azer Abdullaev (Like All) <like-all@yandex.com>  Sat, 06 Aug 2016 00:02:02 +0300
 
