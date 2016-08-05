@@ -1,3 +1,9 @@
+apps-api (0.5-46) unstable; urgency=medium
+
+  * trigger webhook
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 05 Aug 2016 23:19:50 +0300
+
 apps-api (0.5-45) unstable; urgency=medium
 
   * Properly parse chat id
