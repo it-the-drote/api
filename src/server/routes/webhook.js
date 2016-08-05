@@ -34,5 +34,9 @@ router.post('/webhook/mdblog', function(req, res) {
 		}
 	}
 });
+router.post('/webhook/build-deb', function(req, res){
+	console.log("POST parameters: " + req.query);
+	res.send("OK\n");
+});
 
 module.exports = router;
