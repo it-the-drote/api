@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+cd $1
+debuild && debclean && dupload ..
+cd ..
+rm -fr $1 ./*
