@@ -9,7 +9,7 @@ ln -s "/etc/nginx/sites-available/apps-api."$environment".nginx" /etc/nginx/site
 chown -R www-data:www-data /usr/share/apps-api/static
 chown apps:apps /opt/apps-api/public/status
 test -d /home/apps/build-deb/ || mkdir /home/apps/build-deb/
-chown apps:apps /home/api/build-deb/
+chown apps:apps /home/apps/build-deb/
 sdctl reload nginx.service
 sdctl restart rsyslog.service
 sdctl start apps-api.service
