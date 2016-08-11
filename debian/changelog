@@ -1,3 +1,9 @@
+apps-api (0.5-55) unstable; urgency=medium
+
+  * Test
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Thu, 11 Aug 2016 22:21:17 +0300
+
 apps-api (0.5-54) unstable; urgency=medium
 
   * Stringify the payload
