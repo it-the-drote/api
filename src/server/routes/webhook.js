@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 var exec = require('child_process').exec;
+var spawn = require('child_process').spawn;
 var settings = require('/etc/datasources/apps-api.json');
 
 function puts(error, stdout, stderr) {
@@ -35,8 +36,8 @@ router.post('/webhook/mdblog', function(req, res) {
 	}
 });
 router.post('/webhook/build-deb', function(req, res){
-	console.log("POST parameters: " + req.query.repo);
-	console.log("POST body: " + req.body.repository.name);
+	var buildscript = spawn('/opt/apps-api/bin/build-deb', req.body.repository.name, {detached: true});
+	buildscript.unref();
 	res.send("OK\n");
 });
 
