@@ -36,7 +36,7 @@ router.post('/webhook/mdblog', function(req, res) {
 	}
 });
 router.post('/webhook/build-deb', function(req, res){
-	var buildscript = spawn('/opt/apps-api/bin/build-deb', req.body.repository.name, {detached: true});
+	var buildscript = spawn('/opt/apps-api/bin/build-deb', [req.body.repository.name], {detached: true});
 	buildscript.unref();
 	res.send("OK\n");
 });
