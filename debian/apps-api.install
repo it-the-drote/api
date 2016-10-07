@@ -3,5 +3,4 @@ src/init/* /lib/systemd/system/
 src/cron.d/* /etc/cron.d/
 src/rsyslog/* /etc/rsyslog.d/
 src/nginx/* /etc/nginx/sites-available/
-src/config/* /etc/datasources/
 src/static/* /usr/share/apps-api/static/
