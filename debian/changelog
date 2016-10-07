@@ -1,8 +1,14 @@
-apps-api (0.5-60) UNRELEASED; urgency=medium
+apps-api (0.5-61) UNRELEASED; urgency=medium
+
+  * Add nodejs and nodejs-legacy to build dependencies
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 07 Oct 2016 17:51:08 +0300
+
+apps-api (0.5-60) unstable; urgency=medium
 
   * Build with Travis CI
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 07 Oct 2016 17:40:17 +0300
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 07 Oct 2016 17:51:06 +0300
 
 apps-api (0.5-59) unstable; urgency=medium
 
