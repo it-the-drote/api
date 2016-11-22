@@ -1,8 +1,14 @@
-apps-api (0.5-61) UNRELEASED; urgency=medium
+apps-api (0.5-62) UNRELEASED; urgency=medium
+
+  * Github stats cron job added
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 22 Nov 2016 14:18:21 +0300
+
+apps-api (0.5-61) unstable; urgency=medium
 
   * Add nodejs and nodejs-legacy to build dependencies
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 07 Oct 2016 17:51:08 +0300
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 22 Nov 2016 14:18:16 +0300
 
 apps-api (0.5-60) unstable; urgency=medium
 

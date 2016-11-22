@@ -1,0 +1,1 @@
+30 6 * * 1 root systemctl start apps-api-bgtask-github.service
