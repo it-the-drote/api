@@ -1,8 +1,14 @@
-apps-api (0.5-62) UNRELEASED; urgency=medium
+apps-api (0.5-63) UNRELEASED; urgency=medium
+
+  * Github endpoint stubs
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 22 Nov 2016 14:51:19 +0300
+
+apps-api (0.5-62) unstable; urgency=medium
 
   * Github stats cron job added
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 22 Nov 2016 14:18:21 +0300
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 22 Nov 2016 14:51:15 +0300
 
 apps-api (0.5-61) unstable; urgency=medium
 
