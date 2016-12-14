@@ -1,8 +1,14 @@
-apps-api (0.5-63) UNRELEASED; urgency=medium
+apps-api (0.5-64) UNRELEASED; urgency=medium
+
+  * Fix github background job unit file
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 14 Dec 2016 14:58:54 +0300
+
+apps-api (0.5-63) unstable; urgency=medium
 
   * Github endpoint stubs
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 22 Nov 2016 14:51:19 +0300
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 14 Dec 2016 14:58:41 +0300
 
 apps-api (0.5-62) unstable; urgency=medium
 

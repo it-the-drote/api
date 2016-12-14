@@ -3,5 +3,5 @@ Description=Collect weekly contributions
 
 [Service]
 ExecStart=/opt/apps-api/background_jobs/update_github_stats.py
-Type=OneShot
+Type=oneshot
 RemainAfterExit=no
