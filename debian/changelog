@@ -1,8 +1,14 @@
-apps-api (0.5-65) UNRELEASED; urgency=medium
+apps-api (0.5-66) UNRELEASED; urgency=medium
+
+  * Add trailing newline at EOF
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 25 Jan 2017 13:20:34 +0300
+
+apps-api (0.5-65) unstable; urgency=medium
 
   * Duolingo stats cron job
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 24 Jan 2017 20:35:33 +0300
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 25 Jan 2017 13:20:31 +0300
 
 apps-api (0.5-64) unstable; urgency=medium
 
