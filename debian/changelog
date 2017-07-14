@@ -1,8 +1,14 @@
-apps-api (0.5-73) UNRELEASED; urgency=medium
+apps-api (0.5-74) UNRELEASED; urgency=medium
+
+  * Adopted the package to the new build script
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 14 Jul 2017 14:53:25 -0700
+
+apps-api (0.5-73) unstable; urgency=medium
 
   * Enabled HTTPS on production website
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 14 Jul 2017 09:50:02 -0700
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 14 Jul 2017 14:53:21 -0700
 
 apps-api (0.5-72) unstable; urgency=medium
 
