@@ -1,8 +1,14 @@
-apps-api (0.5-67) UNRELEASED; urgency=medium
+apps-api (0.5-68) UNRELEASED; urgency=medium
+
+  * Version bump 
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 14 Jul 2017 06:55:19 -0700
+
+apps-api (0.5-67) unstable; urgency=medium
 
   * Updated travis config
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 14 Jul 2017 06:30:20 -0700
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 14 Jul 2017 06:55:16 -0700
 
 apps-api (0.5-66) unstable; urgency=medium
 
