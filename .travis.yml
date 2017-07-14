@@ -1,8 +1,11 @@
 sudo: required
 group: edge
+env:
+  - DEBREW_HIDDEN_REPO=true
+  - DEBREW_HIDDEN_REPO_PATH=ftp://it-the-drote.tk/hidden/
 
 services:
   - docker
 
 script:
-  - wget -O- https://raw.githubusercontent.com/it-the-drote/debrewery/master/travis-debian.sh | bash -
+  - wget -O- https://raw.githubusercontent.com/it-the-drote/debrewery/master/debrew.sh | bash -
