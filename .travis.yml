@@ -1,8 +1,7 @@
 sudo: required
 group: edge
 env:
-  - DEBREW_HIDDEN_REPO=true
-  - DEBREW_HIDDEN_REPO_PATH=ftp://it-the-drote.tk/hidden/
+  - DEBREW_HIDDEN_REPO=true DEBREW_HIDDEN_REPO_PATH=ftp://it-the-drote.tk/hidden/
 
 services:
   - docker
