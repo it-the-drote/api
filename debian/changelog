@@ -1,10 +1,16 @@
-apps-api (0.5-72) UNRELEASED; urgency=medium
+apps-api (0.5-73) UNRELEASED; urgency=medium
+
+  * Enabled HTTPS on production website
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 14 Jul 2017 09:50:02 -0700
+
+apps-api (0.5-72) unstable; urgency=medium
 
   * Prepared production config for working with ssl
   * Removed deprecated hosts files
   * Fixed deprecated commands 
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 14 Jul 2017 09:01:23 -0700
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 14 Jul 2017 09:50:00 -0700
 
 apps-api (0.5-71) unstable; urgency=medium
 

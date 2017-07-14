@@ -1,23 +1,23 @@
 server {
     listen 80;
     listen [::]:80;
-    #listen 443 ssl;
-    #listen [::]:443 ssl;
+    listen 443 ssl;
+    listen [::]:443 ssl;
 
     server_name api.it-the-drote.tk;
 
     access_log /var/log/nginx/apps-api-access.log;
 
     ### SSL cert files ###
-    #ssl_certificate /etc/letsencrypt/live/api.it-the-drote.tk/fullchain.pem;
-    #ssl_certificate_key /etc/letsencrypt/live/api.it-the-drote.tk/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/api.it-the-drote.tk/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/api.it-the-drote.tk/privkey.pem;
 
     ### Add SSL specific settings here ###
-    #ssl_session_timeout 10m;
+    ssl_session_timeout 10m;
 
-    #ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
-    #ssl_ciphers ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv3:+EXP;
-    #ssl_prefer_server_ciphers on;
+    ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv3:+EXP;
+    ssl_prefer_server_ciphers on;
 
     location / {
         proxy_pass http://unix:/tmp/apps-api.sock:/;
