@@ -7,5 +7,5 @@ Standards-Version: 3.9.5
 
 Package: apps-api
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, nodejs (>= 0.12), tools-pisun, hosts-dropins, memcached, git, python-pymongo, nginx
+Depends: ${shlibs:Depends}, ${misc:Depends}, nodejs (>= 0.12), tools-pisun, memcached, git, python-pymongo, nginx
 Description: various API endpoints
