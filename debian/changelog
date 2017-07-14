@@ -1,8 +1,14 @@
-apps-api (0.5-70) UNRELEASED; urgency=medium
+apps-api (0.5-71) UNRELEASED; urgency=medium
+
+  * Updated paths
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 14 Jul 2017 08:45:09 -0700
+
+apps-api (0.5-70) unstable; urgency=medium
 
   * Changed location of static files
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 14 Jul 2017 08:37:19 -0700
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 14 Jul 2017 08:45:00 -0700
 
 apps-api (0.5-69) unstable; urgency=medium
 
