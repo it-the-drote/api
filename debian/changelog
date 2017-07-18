@@ -1,8 +1,14 @@
-apps-api (0.5-74) UNRELEASED; urgency=medium
+apps-api (0.5-75) UNRELEASED; urgency=medium
+
+  * Version bump
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 18 Jul 2017 05:05:42 -0700
+
+apps-api (0.5-74) unstable; urgency=medium
 
   * Adopted the package to the new build script
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Fri, 14 Jul 2017 14:53:25 -0700
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 18 Jul 2017 05:05:35 -0700
 
 apps-api (0.5-73) unstable; urgency=medium
 
