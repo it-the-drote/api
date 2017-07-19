@@ -7,7 +7,7 @@ var lastfm = new Lastfm({
   api_key: settings.scrobbleApiKey,
   api_secret: settings.scrobbleApiSecret,
   username: settings.scrobbleUsername,
-  authToken: settings.scrobbleAuthToken,
+  password: settings.scrobblePassword,
 });
 
 router.post('/scrobble/report', function(req, res) {
