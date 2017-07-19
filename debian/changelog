@@ -1,8 +1,14 @@
-apps-api (0.5-75) UNRELEASED; urgency=medium
+apps-api (0.6-1) UNRELEASED; urgency=medium
+
+  * Added scrobble endpoint
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 19 Jul 2017 03:19:01 -0700
+
+apps-api (0.5-75) unstable; urgency=medium
 
   * Version bump
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 18 Jul 2017 05:05:42 -0700
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 19 Jul 2017 03:18:57 -0700
 
 apps-api (0.5-74) unstable; urgency=medium
 
