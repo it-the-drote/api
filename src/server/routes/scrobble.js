@@ -20,7 +20,7 @@ router.post('/scrobble/report', function(req, res) {
         artist: req.query.artist,
         track: req.query.track,
         callback: function(result) {
-          console.log('In callback, finished: ' + result);
+          console.log('In callback, finished: %j', result);
           res.send("OK\n");
         }
       });
