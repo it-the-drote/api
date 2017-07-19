@@ -19,6 +19,7 @@ router.post('/scrobble/report', function(req, res) {
         track: req.query.track,
         callback: function(result) {
           console.log('In callback, finished: ' + result);
+          res.send("OK\n");
         }
       });
     }

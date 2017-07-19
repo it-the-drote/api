@@ -1,8 +1,14 @@
-apps-api (0.6-2) UNRELEASED; urgency=medium
+apps-api (0.6-3) UNRELEASED; urgency=medium
+
+  * Added a response
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 19 Jul 2017 04:40:54 -0700
+
+apps-api (0.6-2) unstable; urgency=medium
 
   * Used lastfm password instead of md5 token
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 19 Jul 2017 03:31:04 -0700
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 19 Jul 2017 04:40:52 -0700
 
 apps-api (0.6-1) unstable; urgency=medium
 
