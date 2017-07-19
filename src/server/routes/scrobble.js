@@ -12,6 +12,7 @@ var lastfm = new Lastfm({
 });
 
 router.post('/scrobble/report', function(req, res) {
+  console.log('request: %j', req);
   lastfm.getSessionKey(function(result) {
     console.log('Session key: ' + result.session_key);
     console.log('request: %j', req);
