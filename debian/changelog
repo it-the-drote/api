@@ -1,8 +1,14 @@
-apps-api (0.6-12) UNRELEASED; urgency=medium
+apps-api (0.6-13) UNRELEASED; urgency=medium
+
+  * Debug-logging API signature
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 19 Jul 2017 15:28:45 -0700
+
+apps-api (0.6-12) unstable; urgency=medium
 
   * Use req.body instead of req.query
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 19 Jul 2017 15:10:14 -0700
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 19 Jul 2017 15:28:42 -0700
 
 apps-api (0.6-11) unstable; urgency=medium
 
