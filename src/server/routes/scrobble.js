@@ -12,15 +12,15 @@ var lastfm = new Lastfm({
 });
 
 router.post('/scrobble/report', function(req, res) {
-  console.log('request: %j', req);
+  console.log('request: %j', req.body.artist);
   lastfm.getSessionKey(function(result) {
     console.log('Session key: ' + result.session_key);
     console.log('request: %j', req);
     if (result.success) {
       console.log('Attempting to scrobble...');
       lastfm.scrobbleTrack({
-        artist: req.query.artist,
-        track: req.query.track,
+        artist: req.body.artist,
+        track: req.body.track,
         callback: function(result) {
           console.log('In callback, finished: %j', result);
           res.send("OK\n");
