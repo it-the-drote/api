@@ -1,8 +1,14 @@
-apps-api (0.6-8) UNRELEASED; urgency=medium
+apps-api (0.6-9) UNRELEASED; urgency=medium
+
+  * Added some verbosity
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 19 Jul 2017 06:52:04 -0700
+
+apps-api (0.6-8) unstable; urgency=medium
 
   * Disabled jQuery calls once again
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 19 Jul 2017 06:12:40 -0700
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 19 Jul 2017 06:52:01 -0700
 
 apps-api (0.6-7) unstable; urgency=medium
 
