@@ -1,8 +1,14 @@
-apps-api (0.6-6) UNRELEASED; urgency=medium
+apps-api (0.6-7) UNRELEASED; urgency=medium
+
+  * Enabled logging of api request signature
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 19 Jul 2017 06:07:20 -0700
+
+apps-api (0.6-6) unstable; urgency=medium
 
   * Increased verbosity
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 19 Jul 2017 05:42:03 -0700
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 19 Jul 2017 06:07:15 -0700
 
 apps-api (0.6-5) unstable; urgency=medium
 
