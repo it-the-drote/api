@@ -25,30 +25,34 @@ function scrobble(data, secret, res) {
 }
 
 router.post('/scrobble/report', function(req, res) {
-  var data = {
-    artist: req.body.artist,
-    track: req.body.track
-  };
-  var memcache = new mc.Client();
-  memcache.connect(function () {
-      console.log('Connected to memcached');
-      memcache.get('scrobbler-session-key', function(err, memcacheResponse) {
-        if (err && err.type == 'NOT_FOUND') {
-          lastfm.getSessionKey(function(result) {
-            if (result.success) {
-              memcache.set('scrobbler-session-key', result.session_key, {flags: 0, exptime: 604800}, function(err, status) {
-                console.log('Scrobbler memcache status: ' + status);
-                console.log('Scrobbler memcache error: ' + status);
-              });
-              scrobble(data, result.session_key,res);
-            }
-          });
-        } else {
-          console.log('Getting data from memcache');
-          scrobble(data, memcacheResponse['scrobbler-session-key'], res);
-        }
-      });
-  });
+  if (req.body.token == settings.scrobbleWebhookToken) {
+    var data = {
+      artist: req.body.artist,
+      track: req.body.track
+    };
+    var memcache = new mc.Client();
+    memcache.connect(function () {
+        console.log('Connected to memcached');
+        memcache.get('scrobbler-session-key', function(err, memcacheResponse) {
+          if (err && err.type == 'NOT_FOUND') {
+            lastfm.getSessionKey(function(result) {
+              if (result.success) {
+                memcache.set('scrobbler-session-key', result.session_key, {flags: 0, exptime: 604800}, function(err, status) {
+                  console.log('Scrobbler memcache status: ' + status);
+                  console.log('Scrobbler memcache error: ' + status);
+                });
+                scrobble(data, result.session_key,res);
+              }
+            });
+          } else {
+            console.log('Getting data from memcache');
+            scrobble(data, memcacheResponse['scrobbler-session-key'], res);
+          }
+        });
+    });
+  } else {
+    res.status(403).send("Wrong auth token supplied\n");
+  }
 });
 
 module.exports = router;

@@ -1,8 +1,14 @@
-apps-api (0.6-18) UNRELEASED; urgency=medium
+apps-api (0.6-19) UNRELEASED; urgency=medium
+
+  * Added authentication by token
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Thu, 20 Jul 2017 01:06:53 -0700
+
+apps-api (0.6-18) unstable; urgency=medium
 
   * Removed extra logging and added memcache usage warning
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Thu, 20 Jul 2017 00:25:51 -0700
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Thu, 20 Jul 2017 01:06:50 -0700
 
 apps-api (0.6-17) unstable; urgency=medium
 
