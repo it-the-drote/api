@@ -1,8 +1,14 @@
-apps-api (0.6-16) UNRELEASED; urgency=medium
+apps-api (0.6-17) UNRELEASED; urgency=medium
+
+  * Fixed a typo
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Thu, 20 Jul 2017 00:16:38 -0700
+
+apps-api (0.6-16) unstable; urgency=medium
 
   * Added initial cache support
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Thu, 20 Jul 2017 00:06:34 -0700
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Thu, 20 Jul 2017 00:16:37 -0700
 
 apps-api (0.6-15) unstable; urgency=medium
 
