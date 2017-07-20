@@ -44,6 +44,7 @@ router.post('/scrobble/report', function(req, res) {
             }
           });
         } else {
+          console.log('Getting data from memcache');
           scrobble(data, memcacheResponse['scrobbler-session-key'], res);
         }
       });
