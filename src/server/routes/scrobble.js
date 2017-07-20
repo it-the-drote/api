@@ -28,7 +28,7 @@ router.post('/scrobble/report', function(req, res) {
   var data = {
     artist: req.body.artist,
     track: req.body.track
-  }
+  };
   var memcache = new mc.Client();
   memcache.connect(function () {
       console.log('Connected to memcached');
@@ -46,7 +46,7 @@ router.post('/scrobble/report', function(req, res) {
         } else {
           scrobble(data, memcacheResponse['scrobbler-session-key'], res);
         }
-      })
+      });
   });
 });
 
