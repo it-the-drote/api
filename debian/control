@@ -12,5 +12,5 @@ X-Debrew-Maintainer-Login: like-all
 
 Package: apps-api
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, nodejs (>= 0.12), tools-pisun, memcached, git, python-pymongo, nginx
+Depends: ${shlibs:Depends}, ${misc:Depends}, nodejs (>= 0.12), tools-pisun, memcached, git, python-pymongo, nginx, jq
 Description: various API endpoints
