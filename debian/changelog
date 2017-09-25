@@ -1,8 +1,14 @@
-apps-api (0.7-7) UNRELEASED; urgency=medium
+apps-api (0.8-1) UNRELEASED; urgency=medium
+
+  * Adding skeleton for /device-ping endpoint
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 25 Sep 2017 09:08:09 -0700
+
+apps-api (0.7-7) unstable; urgency=medium
 
   * Version bump
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 25 Sep 2017 02:27:47 -0700
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 25 Sep 2017 09:08:06 -0700
 
 apps-api (0.7-6) unstable; urgency=medium
 

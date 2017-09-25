@@ -14,6 +14,7 @@ var lastfmEndpoint = require('./routes/lastfm');
 var webhookEndpoint = require('./routes/webhook');
 var boardEndpoint = require('./routes/board');
 var scrobbleEndpoint = require('./routes/scrobble');
+var devicepingEndpoint = require('./routes/deviceping');
 
 var app = express();
 
@@ -38,6 +39,7 @@ app.use('/', duolingoEndpoint);
 app.use('/', webhookEndpoint);
 app.use('/', boardEndpoint);
 app.use('/', scrobbleEndpoint);
+app.use('/', devicepingEndpoint);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
