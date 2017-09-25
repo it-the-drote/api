@@ -1,8 +1,14 @@
-apps-api (0.7-5) UNRELEASED; urgency=medium
+apps-api (0.7-6) UNRELEASED; urgency=medium
+
+  * Enchanced package crawler
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 25 Sep 2017 02:11:25 -0700
+
+apps-api (0.7-5) unstable; urgency=medium
 
   * Fixed a typo
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Wed, 20 Sep 2017 12:44:10 -0700
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 25 Sep 2017 02:11:19 -0700
 
 apps-api (0.7-4) unstable; urgency=medium
 
