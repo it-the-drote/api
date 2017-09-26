@@ -1,6 +1,7 @@
 #!/bin/sh
 
 sdctl disable apps-api.service
+sdctl disable apps-api-db.service
 sdctl disable apps-api-jsonstats.service
 rm /etc/nginx/sites-enabled/apps-api.nginx
 sdctl reload nginx.service

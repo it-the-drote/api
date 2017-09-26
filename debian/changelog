@@ -1,8 +1,14 @@
-apps-api (0.8-1) UNRELEASED; urgency=medium
+apps-api (0.9-1) UNRELEASED; urgency=medium
+
+  * Incorporated mongodb
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 26 Sep 2017 01:25:42 -0700
+
+apps-api (0.8-1) unstable; urgency=medium
 
   * Adding skeleton for /device-ping endpoint
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 25 Sep 2017 09:08:09 -0700
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 26 Sep 2017 01:25:32 -0700
 
 apps-api (0.7-7) unstable; urgency=medium
 
