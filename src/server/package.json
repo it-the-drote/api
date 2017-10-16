@@ -18,6 +18,7 @@
     "mc": "1.0.6",
     "async": "*",
     "mongodb": "*",
-    "simple-lastfm": "*"
+    "simple-lastfm": "*",
+    "nano-fs": "*"
   }
 }
