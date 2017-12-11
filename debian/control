@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 9), nodejs, nodejs-legacy
 Standards-Version: 3.9.5
 X-Debrew-Production-Flavours: ["jessie"]
 X-Debrew-Production-Architectures: ["amd64"]
-X-Debrew-Testing-Flavours: ["jessie"]
+X-Debrew-Testing-Flavours: ["stretch"]
 X-Debrew-Testing-Architectures: ["amd64"]
 X-Debrew-Maintainer-Login: like-all
 
