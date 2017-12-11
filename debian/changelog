@@ -1,8 +1,14 @@
-apps-api (0.9-6) UNRELEASED; urgency=medium
+apps-api (0.10-1) UNRELEASED; urgency=medium
+
+  * First build for debian Stretch
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 11 Dec 2017 03:47:24 -0800
+
+apps-api (0.9-6) unstable; urgency=medium
 
   * Updated async/await syntax
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 16 Oct 2017 12:51:35 -0700
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 11 Dec 2017 03:47:21 -0800
 
 apps-api (0.9-5) unstable; urgency=medium
 
