@@ -1,9 +1,9 @@
 #!/bin/sh
 
-sdctl disable apps-api.service
-sdctl disable apps-api-db.service
-sdctl disable apps-api-jsonstats.service
+deb-systemd-invoke disable apps-api.service
+deb-systemd-invoke disable apps-api-db.service
+deb-systemd-invoke disable apps-api-jsonstats.service
 rm /etc/nginx/sites-enabled/apps-api.nginx
-sdctl reload nginx.service
-sdctl stop apps-api.service
-sdctl stop apps-api-jsonstats.service
+deb-systemd-invoke reload nginx.service
+deb-systemd-invoke stop apps-api.service
+deb-systemd-invoke stop apps-api-jsonstats.service
