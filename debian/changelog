@@ -1,8 +1,14 @@
-apps-api (0.10-5) UNRELEASED; urgency=medium
+apps-api (0.10-6) UNRELEASED; urgency=medium
+
+  * Updated UNIX socket path inside nginx configs
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 05 Feb 2018 23:26:16 -0800
+
+apps-api (0.10-5) unstable; urgency=medium
 
   * Removed deviceping endpoint binding
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 05 Feb 2018 23:20:36 -0800
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 05 Feb 2018 23:26:14 -0800
 
 apps-api (0.10-4) unstable; urgency=medium
 
