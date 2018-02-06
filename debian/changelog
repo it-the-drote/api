@@ -1,9 +1,15 @@
-apps-api (0.10-2) UNRELEASED; urgency=medium
+apps-api (0.10-3) UNRELEASED; urgency=medium
+
+  * Updated postinstall routine
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 05 Feb 2018 22:58:30 -0800
+
+apps-api (0.10-2) unstable; urgency=medium
 
   * Changed Letsencrypt webroot to /var/www/acme
   * Changed UNIX socket paths from /tmp to /var/run
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 05 Feb 2018 22:36:04 -0800
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 05 Feb 2018 22:58:28 -0800
 
 apps-api (0.10-1) unstable; urgency=medium
 

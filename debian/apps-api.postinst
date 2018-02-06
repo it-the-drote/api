@@ -12,6 +12,12 @@ chown apps:apps /opt/apps-api/public/status
 chown apps:apps /opt/apps-api/db
 test -d /home/apps/build-deb/ || mkdir /home/apps/build-deb/
 chown apps:apps /home/apps/build-deb/
+
+if [ ! -d /var/run/apps ]; then
+    mkdir -p /var/run/apps
+    chown -R apps:apps /var/run/apps
+fi
+
 deb-systemd-invoke reload nginx.service
 deb-systemd-invoke restart rsyslog.service
 deb-systemd-invoke try-reload-or-restart apps-api-db.service
