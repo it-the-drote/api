@@ -3,7 +3,7 @@ var router = express.Router();
 var fs = require('fs');
 var settings = require('/etc/datasources/apps-api.json');
 var leicht = require('/usr/lib/leicht/leicht.js');
-var environment = parseString(fs.readFileSync('/etc/apps/environment.type', 'utf8').split('\n')[0]);
+var environment = fs.readFileSync('/etc/apps/environment.type', 'utf8').split('\n')[0];
 var recipient = parseInt(fs.readFileSync('/etc/datasources/pisun-default-chat.' + environment, 'utf8').split('\n')[0]);
 var socket = '/var/run/apps/pisun.socket';
 
