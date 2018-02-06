@@ -47,6 +47,6 @@ server {
         add_header 'Access-Control-Allow-Methods' 'GET';
     }
     location /.well-known {
-        root /tmp;
+        root /var/www/acme;
     }
 }

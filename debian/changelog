@@ -1,8 +1,14 @@
-apps-api (0.10-1) UNRELEASED; urgency=medium
+apps-api (0.10-2) UNRELEASED; urgency=medium
+
+  * Changed Letsencrypt webroot to /var/www/acme
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 05 Feb 2018 22:36:04 -0800
+
+apps-api (0.10-1) unstable; urgency=medium
 
   * First build for debian Stretch
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 11 Dec 2017 03:47:24 -0800
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 05 Feb 2018 22:35:59 -0800
 
 apps-api (0.9-6) unstable; urgency=medium
 
