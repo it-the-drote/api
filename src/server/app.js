@@ -14,7 +14,6 @@ var lastfmEndpoint = require('./routes/lastfm');
 var webhookEndpoint = require('./routes/webhook');
 var boardEndpoint = require('./routes/board');
 var scrobbleEndpoint = require('./routes/scrobble');
-var devicepingEndpoint = require('./routes/deviceping');
 
 var app = express();
 

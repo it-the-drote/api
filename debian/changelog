@@ -1,8 +1,14 @@
-apps-api (0.10-3) UNRELEASED; urgency=medium
+apps-api (0.10-4) UNRELEASED; urgency=medium
+
+  * Disabled /device-ping route
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 05 Feb 2018 23:12:52 -0800
+
+apps-api (0.10-3) unstable; urgency=medium
 
   * Updated postinstall routine
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 05 Feb 2018 22:58:30 -0800
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Mon, 05 Feb 2018 23:12:50 -0800
 
 apps-api (0.10-2) unstable; urgency=medium
 
