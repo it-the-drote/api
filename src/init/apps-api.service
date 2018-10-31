@@ -7,6 +7,8 @@ PermissionsStartOnly=true
 ExecStartPre=/bin/mkdir -p /var/run/apps
 ExecStartPre=/bin/chown apps:apps /var/run/apps
 ExecStart=/usr/bin/node /opt/apps/api/current/bin/server.js
+ExecStartPost=/bin/sleep 0.1
+ExecStartPost=/bin/chmod 777 /var/run/apps/apps-api.sock
 
 [Install]
 WantedBy=multi-user.target
