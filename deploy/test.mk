@@ -1,4 +1,4 @@
 test:
 	@echo " ### TESTING CODE\n---\n"
-	$(SSH) nginx -t
+	$(SSH) /usr/sbin/nginx -t
 	@echo "---\n"
