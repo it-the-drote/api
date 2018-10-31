@@ -1,6 +1,6 @@
 var http = require('http');
 var url = require('url');
-var utils = ('./utilities.js');
+var utils = ('utils/utilities.js');
 var oldUmask = process.umask(0000);
 
 //routes
