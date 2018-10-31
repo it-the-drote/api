@@ -1,5 +1,6 @@
 var http = require('http');
 var url = require('url');
+var fs = require('fs');
 var utils = ('./utilities');
 var oldUmask = process.umask(0000);
 
@@ -22,6 +23,17 @@ var server = http.createServer(function(request, response) {
     utils.sendResponse(response, "Not found", 404);
   }
 });
+
 server.listen('/var/run/apps/apps-api.sock', function() {
   process.umask(oldUmask);
+  console.log('Server bound');
+});
+
+server.on('error', function (e) {
+  if (e.code == 'EADDRINUSE') {
+    console.log('Address in use, retrying...');
+    setTimeout(function () {
+      fs.unlink('/var/run/apps/apps-api.sock');
+    }, 1000);
+  }
 });
