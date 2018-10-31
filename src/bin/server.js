@@ -1,6 +1,7 @@
 var http = require('http');
 var url = require('url');
 var utils = ('./utilities');
+var oldUmask = process.umask(0000);
 
 //routes
 var index = require('./routes/index');
@@ -21,4 +22,6 @@ var server = http.createServer(function(request, response) {
     utils.sendResponse(response, "Not found", 404);
   }
 });
-server.listen('/var/run/apps/apps-api.sock');
+server.listen('/var/run/apps/apps-api.sock', function() {
+  process.umask(oldUmask);
+});
