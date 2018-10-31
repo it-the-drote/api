@@ -11,8 +11,7 @@ UPLOAD=scp -P $(PORT) -r $(SRCDIR)/* $(USERNAME)@$(SERVER):$(APPDIR)
 RMLATEST=$(SSH) rm -f $(LATEST)
 MKLATEST=$(SSH) ln -s $(APPDIR) $(LATEST)
 
-COPYNGINXCFG=$(SSH) cp $(LATEST)/nginx/apps-api.conf /etc/nginx/sites-available/
-LINKNGINXCFG=$(SSH) ln -sf /etc/nginx/sites-available/apps-api.conf /etc/nginx/sites-enable/apps-api.conf
+INSERTNGINXCFG=$(SSH) /usr/local/bin/insert-nginx-config $(LATEST)/nginx/apps-api.conf
 
 upload:
 	@echo " ### UPLOADING CODE\n---\n"
@@ -20,6 +19,5 @@ upload:
 	$(UPLOAD)
 	$(RMLATEST)
 	$(MKLATEST)
-	$(COPYNGINXCFG)
-	$(LINKNGINXCFG)
+	$(INSERTNGINXCFG)
 	@echo "---\n"
