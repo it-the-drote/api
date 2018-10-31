@@ -11,7 +11,7 @@ UPLOAD=scp -P $(PORT) -r $(SRCDIR)/* $(USERNAME)@$(SERVER):$(APPDIR)
 RMLATEST=$(SSH) rm -f $(LATEST)
 MKLATEST=$(SSH) ln -s $(APPDIR) $(LATEST)
 
-INSERTNGINXCFG=$(SSH) /usr/local/bin/insert-nginx-config $(LATEST)/nginx/apps-api.conf
+INSERTNGINXCFG=$(SSH) sudo /usr/local/bin/insert-nginx-config $(LATEST)/nginx/apps-api.conf
 
 upload:
 	@echo " ### UPLOADING CODE\n---\n"
