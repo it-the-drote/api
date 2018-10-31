@@ -1,0 +1,12 @@
+[Unit]
+Description=Various API endpoints
+
+[Service]
+User=apps
+PermissionsStartOnly=true
+ExecStartPre=/bin/mkdir -p /var/run/apps
+ExecStartPre=/bin/chown apps:apps /var/run/apps
+ExecStart=/usr/bin/node /opt/apps/api/bin/server.js
+
+[Install]
+WantedBy=multi-user.target
