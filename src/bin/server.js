@@ -1,5 +1,5 @@
 var http = require('http');
-var url = require('url);
+var url = require('url');
 var utils = ('./utilities');
 
 //routes
