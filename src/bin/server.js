@@ -1,11 +1,11 @@
 var http = require('http');
 var url = require('url');
-var utils = ('./utilities');
+var utils = ('./utilities.js');
 var oldUmask = process.umask(0000);
 
 //routes
-var index = require('./routes/index');
-var telegram = require('./routes/telegram');
+var index = require('./routes/index.js');
+var telegram = require('./routes/telegram.js');
 var routes = {
   '/': index,
   '/telegram': telegram
