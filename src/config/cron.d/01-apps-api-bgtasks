@@ -1,2 +1,0 @@
-30 6 * * 1 root systemctl start apps-api-bgtask-github.service
-30 6 * * * root systemctl start apps-api-bgtask-duolingo.service

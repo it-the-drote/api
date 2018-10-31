@@ -1,7 +1,0 @@
-[Unit]
-Description=Duolingo daily stats
-
-[Service]
-ExecStart=/opt/apps-api/background_jobs/update_duolingo_stats.py
-Type=oneshot
-RemainAfterExit=no

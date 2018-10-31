@@ -1,7 +1,0 @@
-src/server/* /opt/apps-api/
-src/config/init/* /lib/systemd/system/
-src/config/cron.d/* /etc/cron.d/
-src/config/rsyslog/* /etc/rsyslog.d/
-src/config/nginx/* /etc/nginx/sites-available/
-src/config/db/* /etc/mongodb/
-src/static/* /opt/apps-api/static/

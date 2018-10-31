@@ -1,9 +1,0 @@
-#!/bin/sh
-
-deb-systemd-invoke disable apps-api.service
-deb-systemd-invoke disable apps-api-db.service
-deb-systemd-invoke disable apps-api-jsonstats.service
-rm /etc/nginx/sites-enabled/apps-api.nginx
-deb-systemd-invoke reload nginx.service
-deb-systemd-invoke stop apps-api.service
-deb-systemd-invoke stop apps-api-jsonstats.service
