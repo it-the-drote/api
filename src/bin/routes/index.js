@@ -1,4 +1,4 @@
-var utils = ('utils/utilities.js');
+var utils = ('utils');
 /*
 var actions = {
   'GET': (request, response) => {
