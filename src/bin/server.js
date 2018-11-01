@@ -19,7 +19,8 @@ var server = http.createServer(function(request, response) {
   if (route) {
     route(request, response);
   } else {
-    utils.sendResponse(response, "Not found", 404);
+    response.writeHead(404);
+    response.end("Not found");
   }
 });
 
