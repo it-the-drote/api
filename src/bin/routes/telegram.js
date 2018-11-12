@@ -8,7 +8,7 @@ module.exports = (request, response) => {
     response.writeHead(200);
     response.end("This endpoint does not support GET requests");
   } else if (request.method === 'POST') {
-    console.log(request.body.message);
+    console.log("Request structure: %j", request);
     response.writeHead(200);
     response.end("OK");
   }
