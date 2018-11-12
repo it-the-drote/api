@@ -9,8 +9,14 @@ module.exports = (request, response) => {
     response.writeHead(200);
     response.end("This endpoint does not support GET requests");
   } else if (request.method === 'POST') {
-    console.log("Request structure: " + util.inspect(request));
-    response.writeHead(200);
-    response.end("OK");
+    var data = '';
+    request.on('data', (chunk) => {
+      data += chunk;
+    };
+    request.on('end', () => {
+      console.log("Message structure: " + util.inspect(data));
+      response.writeHead(200, {'Content-Type': 'text/plain'});
+      response.end('Success');
+    };
   }
 };
