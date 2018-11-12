@@ -1,4 +1,5 @@
 var fs = require('fs');
+const util = require('util');
 var telegramToken = process.env['TELEGRAM_BOT_TOKEN'];
 var leicht = require('/usr/lib/leicht/leicht.js');
 var recipient = parseInt(fs.readFileSync(process.env['TELEGRAM_BOT_RECIPIENT'], 'utf8').split('\n')[0]);
