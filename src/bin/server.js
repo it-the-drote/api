@@ -2,6 +2,9 @@ var http = require('http');
 var url = require('url');
 var oldUmask = process.umask(0000);
 
+//ENV variables
+var socketPath = process.env['SOCKET_PATH'];
+
 //routes
 var index = require('./routes/index.js');
 var telegram = require('./routes/telegram.js');
@@ -23,8 +26,7 @@ var server = http.createServer(function(request, response) {
   }
 });
 
-server.listen('/var/run/apps/apps-api.sock', function() {
+server.listen(socketPath, function() {
   process.umask(oldUmask);
-  console.log(process.env['SOCKET_PATH']);
   console.log('Server bound');
 });
