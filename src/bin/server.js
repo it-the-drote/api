@@ -25,5 +25,6 @@ var server = http.createServer(function(request, response) {
 
 server.listen('/var/run/apps/apps-api.sock', function() {
   process.umask(oldUmask);
+  console.log(process.env['SOCKET_PATH']);
   console.log('Server bound');
 });

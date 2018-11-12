@@ -4,6 +4,7 @@ Description=Various API endpoints
 [Service]
 User=apps
 PermissionsStartOnly=true
+EnvironmentFile=-/etc/datasources/apps-api.env
 ExecStartPre=/bin/mkdir -p /var/run/apps
 ExecStartPre=/bin/chown apps:apps /var/run/apps
 ExecStartPre=-/bin/rm -f /var/run/apps/apps-api.sock
