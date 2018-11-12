@@ -26,6 +26,8 @@ var server = http.createServer(function(request, response) {
   }
 });
 
+console.log("Trying to listen on " + socketPath);
+
 server.listen(socketPath, function() {
   process.umask(oldUmask);
   console.log('Server bound');
