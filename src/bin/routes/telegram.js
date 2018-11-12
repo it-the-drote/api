@@ -17,11 +17,11 @@ module.exports = (request, response) => {
       data += chunk;
     });
     request.on('end', () => {
-      //console.log("Message structure: " + util.inspect(data));
       fields = querystring.parse(data);
       if (fields.token === telegramToken) {
+        leicht.sendMessage(recipient, 0, fields.message, false, process.env['TELEGRAM_BOT_SOCKET']);
         response.writeHead(200, {'Content-Type': 'text/plain'});
-        response.end('Success');
+        response.end('OK');
       } else {
         response.writeHead(401, {'Content-Type': 'text/plain'});
         response.end('Unauthorized');
