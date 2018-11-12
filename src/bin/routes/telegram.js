@@ -10,13 +10,13 @@ module.exports = (request, response) => {
     response.end("This endpoint does not support GET requests");
   } else if (request.method === 'POST') {
     var data = '';
-    request.on('data', chunk) => {
+    request.on('data', (chunk) => {
       data += chunk;
-    };
-    request.on('end') => {
+    });
+    request.on('end', () => {
       console.log("Message structure: " + util.inspect(data));
       response.writeHead(200, {'Content-Type': 'text/plain'});
       response.end('Success');
-    };
+    });
   }
 };
