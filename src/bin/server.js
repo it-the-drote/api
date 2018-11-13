@@ -8,9 +8,11 @@ var socketPath = process.env['SOCKET_PATH'];
 //routes
 var index = require('./routes/index.js');
 var telegram = require('./routes/telegram.js');
+var ping = require('./routes/ping.js');
 var routes = {
   '/': index,
-  '/telegram': telegram
+  '/telegram': telegram,
+  '/ping': ping
 };
 
 //server
