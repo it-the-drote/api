@@ -7,6 +7,16 @@ const leicht = require('/usr/lib/leicht/leicht.js');
 var telegramToken = process.env['TELEGRAM_BOT_TOKEN'];
 var recipient = parseInt(fs.readFileSync(process.env['TELEGRAM_BOT_RECIPIENT'], 'utf8').split('\n')[0]);
 
+function respondWithMessage(message, response) {  
+  leicht.sendMessage(recipient, 0, message, false, process.env['TELEGRAM_BOT_SOCKET']);
+  response.writeHead(200, {'Content-Type': 'text/plain'});
+  response.end('OK');
+}
+function respondWithFailure(response) {
+  response.writeHead(401, {'Content-Type': 'text/plain'});
+  response.end('Unauthorized');
+}
+
 module.exports = (request, response) => {
   if (request.method === 'GET') {
     response.writeHead(200);
@@ -19,12 +29,9 @@ module.exports = (request, response) => {
     request.on('end', () => {
       fields = querystring.parse(data);
       if (fields.token === telegramToken) {
-        leicht.sendMessage(recipient, 0, fields.message, false, process.env['TELEGRAM_BOT_SOCKET']);
-        response.writeHead(200, {'Content-Type': 'text/plain'});
-        response.end('OK');
+        respondWithMessage(fields.message, response);
       } else {
-        response.writeHead(401, {'Content-Type': 'text/plain'});
-        response.end('Unauthorized');
+        respondWithFailure(response);
       }
     });
   }
