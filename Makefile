@@ -1,7 +1,8 @@
 PROJECT=api
 SERVICE=apps-api
 
-all: upload build test release restart
+all: upload build test
+release: release restart
 
 include deploy/target.mk
 include deploy/upload.mk
