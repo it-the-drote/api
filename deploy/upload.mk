@@ -2,7 +2,7 @@ VERSION=`git rev-list master --count`
 SRCDIR=src
 SSH=ssh -p $(PORT) $(USERNAME)@$(SERVER)
 
-APPDIR=/opt/apps/$(PROJECT)/$(VERSION)
+APPDIR=/opt/apps/$(PROJECT)/releases/$(VERSION)
 LATEST=/opt/apps/$(PROJECT)/latest
 CURRENT=/opt/apps/$(PROJECT)/current
 
