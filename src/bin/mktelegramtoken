@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+token=`uuidgen`
+
+if ! test -d /opt/apps/api/spool; then
+  sudo -u apps mkdir -m 700 -p /opt/apps/api/spool
+fi
+sudo -u apps touch /opt/apps/api/spool/${token}
+
+echo "Generated one time telegram token: ${token}"
